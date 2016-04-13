@@ -24,8 +24,7 @@ public class PercolationStats {
 				//the row number is the whole number in the division
 				int row = (int) Math.floor(open/N);
 				//the column is the modulus of N
-				int col = (int) open % N;
-				
+				int col =  (int) open % N;
 				if(!p.isOpen(row, col)){
 					p.open(row, col);
 				}

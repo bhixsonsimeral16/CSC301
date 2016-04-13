@@ -1,0 +1,18 @@
+{
+  "C:\\Users\\Brian\\Documents\\CSC\\CSC301\\percolationEclipse\\src": {
+    "location": "C:\\Users\\Brian\\Documents\\CSC\\CSC301\\percolationEclipse\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Brian\\Documents\\CSC\\CSC301\\percolationEclipse\\src\u0027. Skipped."
+  },
+  "C:\\Program Files (x86)\\Java\\jre1.8.0_60\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files (x86)\\Java\\jre1.8.0_60\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No class path info available for \u0027C:\\Program Files (x86)\\Java\\jre1.8.0_60\\lib\\rt.jar\u0027. Skipped."
+  },
+  "C:\\Users\\Brian\\Downloads\\algs4.jar": {
+    "location": "C:\\Users\\Brian\\Downloads\\algs4.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\Brian\\Downloads\\algs4.jar\u0027. Neither fingerprint \u00273e0fd9b33cecfd957505affd3c15886615b3a2c0\u0027 nor symbolic name \u0027algs4\u0027 are known."
+  }
+}

@@ -1,3 +1,4 @@
+import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
@@ -122,17 +123,20 @@ public class Percolation {
 	
 	// unit testing (required)
 	public static void main(String[] args){
-		int N = 200;
-		int T = 100;
-		Stopwatch timer  = new Stopwatch();
-		PercolationStats p = new PercolationStats(N, T);
-		double time = timer.elapsedTime();
-		System.out.println("PercolationStats(" + N + ", " + T + ")");
-		System.out.println("Mean: " + p.mean());
-		System.out.println("Standard Deviation: " + p.stddev());
-		System.out.println("Confidence Low: " + p.confidenceLow());
-		System.out.println("Confidence High: " + p.confidenceHigh());
-		System.out.println("Time elapseed: " + time);
+		while(true){
+			System.out.println(StdRandom.uniform(400000));
+		}
+//		int N = 200;
+//		int T = 100;
+//		Stopwatch timer  = new Stopwatch();
+//		PercolationStats p = new PercolationStats(N, T);
+//		double time = timer.elapsedTime();
+//		System.out.println("PercolationStats(" + N + ", " + T + ")");
+//		System.out.println("Mean: " + p.mean());
+//		System.out.println("Standard Deviation: " + p.stddev());
+//		System.out.println("Confidence Low: " + p.confidenceLow());
+//		System.out.println("Confidence High: " + p.confidenceHigh());
+//		System.out.println("Time elapseed: " + time);
 		
 //		Percolation p = new Percolation(5);
 //		System.out.println(p.uf);

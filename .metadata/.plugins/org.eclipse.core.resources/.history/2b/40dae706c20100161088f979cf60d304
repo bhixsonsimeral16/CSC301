@@ -122,8 +122,8 @@ public class Percolation {
 	
 	// unit testing (required)
 	public static void main(String[] args){
-		int N = 200;
-		int T = 100;
+		int N = 2;
+		int T = 100000;
 		Stopwatch timer  = new Stopwatch();
 		PercolationStats p = new PercolationStats(N, T);
 		double time = timer.elapsedTime();
