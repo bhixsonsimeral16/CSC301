@@ -12,23 +12,20 @@ public class PercolationStats {
 			throw new IllegalArgumentException("Neither N or T may be less than or equal to 0");
 		}
 		this.T = T;
-		Percolation p = new Percolation(N);
 		this.percThresh = new double[T];
 		for(int i = 0; i < T; i++){
+			Percolation p = new Percolation(N);
 			while(true){
-				//randomly create a number between 0 and N*N - 1
-				double open = StdRandom.uniform(N*N);
-				//the row number is the whole number in the division
-				int row = (int) Math.floor(open/N);
-				//the column is the modulus of N
-				int col = (int) open % N;
+				//randomly select a number between 0 and N-1 for both row and column
+				int row = (int) StdRandom.uniform(N);
+				int col = (int) StdRandom.uniform(N);
 				
 				if(!p.isOpen(row, col)){
 					p.open(row, col);
 				}
 				if(p.percolates()){
 					//Percolation threshold is the percentage of open spaces when percolation occurs
-					this.percThresh[i] = (p.numberOfOpenSites() / (double) (N * N));
+					this.percThresh[i] = ((double) p.numberOfOpenSites() / (double) (N * N));
 					break;
 				}
 			}

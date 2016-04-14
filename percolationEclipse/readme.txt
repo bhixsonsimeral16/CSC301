@@ -1,10 +1,10 @@
 /******************************************************************************
- *  Name:
+ *  Name: Brian Hixson-Simeral
  *
- *  Operating system:
+ *  Operating system: Windows 10
  *  Compiler:
- *  Text editor / IDE:
- *  Hours to complete assignment (optional):
+ *  Text editor / IDE: Sublime 2 & gedit/Eclipse
+ *  Hours to complete assignment (optional): 8.5 hours
  ******************************************************************************/
 
 
@@ -12,21 +12,24 @@
  *  Describe how you implemented Percolation.java. How did you check
  *  whether the system percolates?
  *****************************************************************************/
-I followed the api exactly.  Percolation() initializes the number of open sites 
-at 0, saves the dimensions of the grid, creates a boolean[][] that is initialzed 
-to false in all spaces, and also creates two WeightedQuickUnionUF, one that is 
-connected to a top and bottom virtual node and one that is only connected to the 
-top.  open() will check to see if the position is closed, if it is then it will 
-open it.  Afterwards, it checks the positions adjacent to the newly opened spot 
-and does a union() with that position if it is open.  This step is completed for 
-both WeightedQuickUnionUF objects.  isOpen() returns the value of the boolean[][] 
-at the position of the arguments.  isFull() returns true if the position in question 
-is both open and connected to the virtual top node in the WeightedQuickUnionUF 
-object that does not contain a bottom virtual node. numberOfSites() returns the 
-value of a counter that is incremented in open().  percolates() checks to see if 
-the top node is connected to the bottom node. I implemented two recomended methods, 
-xyTo1D() which takes a row, column and converts it to a single number, and 
-validateIndex(), which checks to see if the row and column are in bounds.
+Percolation() initializes the number of open sites at 0, saves the dimensions of 
+the grid, creates a boolean[][] that is initialzed to false in all spaces, and 
+also creates two WeightedQuickUnionUF, one that is connected to a top and bottom
+virtual node and one that is only connected to the top. This second UF is used to 
+handle backwash, as the bottom row is never connected to a virtual node. This 
+means that when one bottom node is full, it will not make the others full without 
+a direct connection through real nodes. open() will check to see if the position 
+is closed, if it is then it will open it.  Afterwards, it checks the positions 
+adjacent to the newly opened spot and does a union() with that position if it is 
+open.  This step is completed for both WeightedQuickUnionUF objects.  isOpen() 
+returns the value of the boolean[][] at the position of the arguments.  isFull() 
+returns true if the position in question is both open and connected to the virtual 
+top node in the WeightedQuickUnionUF object that does not contain a bottom virtual 
+node. numberOfSites() returns the value of a counter that is incremented in open().  
+percolates() checks to see if the top node is connected to the bottom node. I 
+implemented two recomended methods, xyTo1D() which takes a row, column and converts 
+it to a single number, and validateIndex(), which checks to see if the row and 
+column are in bounds.
 
 
 /******************************************************************************
@@ -109,11 +112,17 @@ int is 4 * ~4 bytes (by definition and I initialize 4 of them)
 WeightedQuickUnionUF is 2 * ~8 bytes (each object reference is 8 bytes and 
 I initialize two of them)
 
+WeightedQuickUnionUF is 2 * ~ 8n bytes (8N + 88 bytes: 16 for overhead, 
+8 + (4N + 24) bytes for each int[], there are 2, 4 bytes for int, and 4 
+bytes of padding)
+
+Total: 24 + 17N + N^2 + 16 + 16 + 16N + 172
+228 + 33N + N^2
+~ N^2
 
 /******************************************************************************
  *  Known bugs / limitations.
  *****************************************************************************/
-My stats do not match the example stats for N = 2, T = 100000.
 It has a slightly higher memory requirement as I initialize two WeightedQuickUnionUF.
 
 

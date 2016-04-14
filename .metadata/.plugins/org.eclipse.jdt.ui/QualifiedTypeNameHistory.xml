@@ -7,4 +7,6 @@
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.WeightedQuickUnionUF"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.Stopwatch"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.QuickUnionUF"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdDraw"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdOut"/>
 </qualifiedTypeNameHistroy>
