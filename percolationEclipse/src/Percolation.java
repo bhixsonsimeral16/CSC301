@@ -131,19 +131,19 @@ public class Percolation {
 		PercolationStats perc = new PercolationStats(N, T);
 		double time2 = timer2.elapsedTime();
 		double prevTime = time2;
-		for(T = 200; true; T = T*2){
-		Stopwatch timer  = new Stopwatch();
-		PercolationStats p = new PercolationStats(N, T);
-		double time = timer.elapsedTime();
-		System.out.println();
-		System.out.println("PercolationStats(" + N + ", " + T + ")");
-		System.out.println("Mean: " + p.mean());
-		System.out.println("Standard Deviation: " + p.stddev());
-		System.out.println("Confidence Low: " + p.confidenceLow());
-		System.out.println("Confidence High: " + p.confidenceHigh());
-		System.out.println("Time elapsed: " + time);
-		System.out.println("Time ratio: " + time/prevTime);
-		prevTime = time;
+		for (T = 200; true; T = T * 2) {
+			Stopwatch timer = new Stopwatch();
+			PercolationStats p = new PercolationStats(N, T);
+			double time = timer.elapsedTime();
+			System.out.println();
+			System.out.println("PercolationStats(" + N + ", " + T + ")");
+			System.out.println("Mean: " + p.mean());
+			System.out.println("Standard Deviation: " + p.stddev());
+			System.out.println("Confidence Low: " + p.confidenceLow());
+			System.out.println("Confidence High: " + p.confidenceHigh());
+			System.out.println("Time elapsed: " + time);
+			System.out.println("Time ratio: " + time / prevTime);
+			prevTime = time;
 		}
 	}
 }
