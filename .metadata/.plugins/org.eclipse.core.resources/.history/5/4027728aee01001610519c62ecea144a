@@ -3,20 +3,23 @@ import edu.princeton.cs.algs4.StdStats;
 
 
 public class PercolationStats {
-	private int T;                 //number of times the test is run
-	private double[] percThresh;   //array holding the Percolation threshold for each trial
+	private int N;
+	private int T;
+	private Percolation p;
+	private double[] percThresh;
 	
 	// perform T independent experiments on an N-by-N grid
 	public PercolationStats(int N, int T) throws IllegalArgumentException{
 		if(N <= 0 || T <= 0){
 			throw new IllegalArgumentException("Neither N or T may be less than or equal to 0");
 		}
+		this.N = N;
 		this.T = T;
-		Percolation p = new Percolation(N);
+		this.p = new Percolation(N);
 		this.percThresh = new double[T];
 		for(int i = 0; i < T; i++){
 			while(true){
-				//randomly create a number between 0 and N*N - 1
+				//uniformly create a number between 0 and N*N - 1
 				double open = StdRandom.uniform(N*N);
 				//the row number is the whole number in the division
 				int row = (int) Math.floor(open/N);
@@ -27,7 +30,6 @@ public class PercolationStats {
 					p.open(row, col);
 				}
 				if(p.percolates()){
-					//Percolation threshold is the percentage of open spaces when percolation occurs
 					this.percThresh[i] = (p.numberOfOpenSites() / (double) (N * N));
 					break;
 				}

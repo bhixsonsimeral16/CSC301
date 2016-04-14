@@ -1,4 +1,3 @@
-import edu.princeton.cs.algs4.QuickUnionUF;
 import edu.princeton.cs.algs4.Stopwatch;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
@@ -18,7 +17,6 @@ public class Percolation {
 		if (N <= 0){
 			throw new IllegalArgumentException("cannot initialize a Percolation with an N of 0 or less");
 		}
-		
 		this.openSites = 0;
 		this.dim = N;
 		this.openArray = new boolean[dim][dim];
@@ -28,10 +26,10 @@ public class Percolation {
 		this.uf = new WeightedQuickUnionUF((dim*dim)+2);
 		this.ufNoBot = new WeightedQuickUnionUF((dim*dim)+1);
 		
-		this.top = dim*dim;         //int representing the virtual top node
-		this.bot = (dim*dim)+1;     //int representing the virtual bottom node
+		this.top = dim*dim;
+		this.bot = (dim*dim)+1;
 		
-		//connect the top row to the virtual node for both UF
+		//connect the top row to the virtual node
 		//connect the bottom row to the virtual node
 		for(int i = 0; i < dim; i++){
 			this.uf.union( i, top );
@@ -41,7 +39,6 @@ public class Percolation {
 	}
 	
 	// open the site (row, col) if it is not open already
-	// union() with any open adjacent spaces
 	public void open(int row, int col) throws IndexOutOfBoundsException{
 		if(!validateIndex(row, col)){
 			throw new IndexOutOfBoundsException("index value is out of bounds");
@@ -53,8 +50,6 @@ public class Percolation {
 			
 			//test to see if the position is on one of the sides of the grid
 			//union with open positions accordingly
-			//e.g. if the spot is on the right-most side, do not try to union 
-			//with the spot to the right of it
 			if( col != 0 && isOpen(row, col - 1)){
 				uf.union(p, p - 1);
 				ufNoBot.union(p, p - 1);
@@ -89,7 +84,7 @@ public class Percolation {
 			throw new IndexOutOfBoundsException("index value is out of bounds");
 		}
 		int p = xyTo1D(row, col);
-		//is it open and connected to the top?
+		//dim*dim is the virtual top node
 		if(isOpen(row, col) && ufNoBot.connected(top, p)){
 			return true;
 		}
@@ -125,8 +120,8 @@ public class Percolation {
 	
 	// unit testing (required)
 	public static void main(String[] args){
-		int N = 1600;         //grid size is N*N
-		int T = 1600;         //perform T trials
+		int N = 1600;
+		int T = 800;
 		Stopwatch timer  = new Stopwatch();
 		PercolationStats p = new PercolationStats(N, T);
 		double time = timer.elapsedTime();
@@ -136,5 +131,29 @@ public class Percolation {
 		System.out.println("Confidence Low: " + p.confidenceLow());
 		System.out.println("Confidence High: " + p.confidenceHigh());
 		System.out.println("Time elapsed: " + time);
+		
+//		Percolation p = new Percolation(5);
+//		System.out.println(p.uf);
+//		p.open(0, 1);
+//		p.open(0, 0);
+//		System.out.println(p.uf.find(0));
+//		p.open(1, 0);
+//		p.open(2, 0);
+//		System.out.println(p.uf.find(0));
+//		System.out.println(p.uf.find(1));
+//		System.out.println(p.uf.find(5));
+//		System.out.println(p.uf.find(10));
+//		p.open(1, 0);
+//		p.open(2, 0);
+//		p.open(3, 0);
+//		p.open(4, 0);
+//		p.open(4, 4);
+//		p.open(1, 1);
+//		p.open(1, 2);
+//		System.out.println("Connected? " + p.uf.connected(0, 0));
+//		System.out.println("percolates? " + p.percolates());
+//		System.out.println("is it full? " + p.isFull(0, 0));
+//		System.out.println("0, 0 is open:" + p.isOpen(0, 0));
+		
 	}
 }
