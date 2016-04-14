@@ -125,18 +125,25 @@ public class Percolation {
 	
 	// unit testing (required)
 	public static void main(String[] args){
-		int N = 1600;         //grid size is N*N
+		int N = 100;         //grid size is N*N
 		int T = 100;         //perform T trials
+		Stopwatch timer2  = new Stopwatch();
+		PercolationStats perc = new PercolationStats(N, T);
+		double time2 = timer2.elapsedTime();
+		double prevTime = time2;
+		for(T = 200; true; T = T*2){
 		Stopwatch timer  = new Stopwatch();
 		PercolationStats p = new PercolationStats(N, T);
 		double time = timer.elapsedTime();
+		System.out.println();
 		System.out.println("PercolationStats(" + N + ", " + T + ")");
 		System.out.println("Mean: " + p.mean());
 		System.out.println("Standard Deviation: " + p.stddev());
 		System.out.println("Confidence Low: " + p.confidenceLow());
 		System.out.println("Confidence High: " + p.confidenceHigh());
-		double time2 = timer.elapsedTime();
 		System.out.println("Time elapsed: " + time);
-		System.out.println("Time elapsed: " + time2);
+		System.out.println("Time ratio: " + time/prevTime);
+		prevTime = time;
+		}
 	}
 }
