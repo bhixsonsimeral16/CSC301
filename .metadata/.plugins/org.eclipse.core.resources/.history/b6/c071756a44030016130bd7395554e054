@@ -1,0 +1,102 @@
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+
+public class Deque<Item> implements Iterable<Item> {
+	private int size;
+	private LinkedList<Item> deque;
+	
+	// construct an empty deque
+	public Deque() {
+		this.deque = new LinkedList<Item>();
+	}
+
+	// is the deque empty?
+	public boolean isEmpty() {
+		return (this.size == 0);
+	}
+
+	// return the number of items on the deque
+	public int size() {
+		return this.size;
+	}
+
+	// add the item to the front
+	public void addFirst(Item item) throws NullPointerException {
+		if(item == null){
+			throw new NullPointerException("Can not add a null Item");
+		}
+		deque.addFirst(item);
+		this.size++;
+	}
+
+	// add the item to the end
+	public void addLast(Item item) throws NullPointerException {
+		if(item == null){
+			throw new NullPointerException("Can not add a null Item");
+		}
+		deque.addLast(item);
+		this.size++;
+	}
+
+	// remove and return the item from the front
+	public Item removeFirst() throws NoSuchElementException {
+		if(deque.get(0) == null){
+			throw new NoSuchElementException("The Deque is empty")
+		}
+		this.size--;
+		return deque.remove();
+	}
+
+	// remove and return the item from the end
+	public Item removeLast() throws NoSuchElementException {
+		if(deque.get(0) == null){
+			throw new NoSuchElementException("The Deque is empty")
+		}
+		this.size--;
+		return deque.remove(size-1);
+	}
+
+	// return an iterator over items in order from front to end
+	public Iterator<Item> iterator() {
+		return new ListIterator();
+	}
+	
+	private class LinkedList<Item>{
+		public Node first;
+		public Node last;
+		private class Node{
+			public Item item;
+			public Node next;
+			
+		}
+	}
+	
+	// the iterator object for Deque
+	private class ListIterator implements Iterator<Item>{
+		private int index = 0;
+		private Item current = deque.get(index);
+		
+		public boolean hasNext(){
+			return current != null;
+		}
+		
+		public Item next() throws NoSuchElementException{
+			if(!hasNext){
+				throw new NoSuchElementException("There are no more elements");
+			}
+			Item item = current;
+			index++;
+			current = deque.get(index);
+			return item;
+		}
+		public void remove() throws UnsupportedOperationException{
+			throw new UnsupportedOperationException("The remove() method is not supported")
+		}
+	}
+
+	// unit testing (required)
+	public static void main(String[] args) {
+
+	}
+}

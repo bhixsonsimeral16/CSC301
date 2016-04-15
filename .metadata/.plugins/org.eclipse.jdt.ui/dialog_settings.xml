@@ -26,11 +26,38 @@
 	<section name="BuildPathsPropertyPage">
 		<item value="2" key="pageIndex"/>
 	</section>
-	<section name="quick_assist_proposal_size">
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item value="647" key="DIALOG_WIDTH"/>
+		<item value="71" key="DIALOG_Y_ORIGIN"/>
+		<item value="775" key="DIALOG_HEIGHT"/>
+		<item value="607" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
+<<<<<<< HEAD
 	<section name="completion_proposal_size">
 	</section>
 	<section name="JavaElementSearchActions">
+=======
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="false" key="create_main"/>
+		<item value="true" key="create_unimplemented"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="FinalModifier"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="3" key="index"/>
+>>>>>>> 36e28793b487b2217de894abe0f557039f4fde15
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.text.QuickOutline">
 		<item value="true" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_SIZE"/>
@@ -39,4 +66,11 @@
 		<item value="false" key="GoIntoTopLevelTypeAction.isChecked"/>
 		<item value="false" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION"/>
 	</section>
+<<<<<<< HEAD
+=======
+	<section name="AddGetterSetterDialog">
+		<item value="false" key="RemoveFinal"/>
+		<item value="false" key="SortOrdering"/>
+	</section>
+>>>>>>> 36e28793b487b2217de894abe0f557039f4fde15
 </section>
