@@ -44,27 +44,28 @@ column are in bounds.
  *****************************************************************************/
 
 (keep T constant)
+T = 100
  N          time (seconds)
 ------------------------------
-200			0.023
-400			0.09
-800			0.475
-1600		4.198
-3200		35.836
+100 		0.166
+200			0.865
+400			5.627
+800			49.032
+1600		426.712
 
 
 (keep N constant)
-
+N = 100
  T          time (seconds)
 ------------------------------
-100 		4.198
-200			3.887
-400			5.05
-800			4.626
-1600		3.816
+100 		0.148
+200			0.286
+400			0.554
+800			1.111
+1600		2.208
 
 
-running time as a function of N and T:  ~ 9.5E-9 * N^2.7 T^-0.0024
+running time as a function of N and T:  ~ 4.2E-9 * N^2.8 T^0.97
 
 
 /******************************************************************************
@@ -73,28 +74,28 @@ running time as a function of N and T:  ~ 9.5E-9 * N^2.7 T^-0.0024
 
 
 (keep T constant)
-
+T = 100
  N          time (seconds)
 ------------------------------
-200			0.019
-400			0.042
-800			0.147
-1600		0.687
-3200		3.317
+100			0.11
+200			0.474
+400			2.274
+800			13.51
+1600		74.69
 
 
 (keep N constant)
-
+N = 100
  T          time (seconds)
 ------------------------------
-100 		0.687
-200			0.719
-400			0.701
-800			0.751
-1600		0.69
+100 		0.11
+200			0.22
+400			0.433
+800			0.873
+1600		1.741
 
 
-running time as a function of N and T:  ~ 5.4E-7 * N^1.9 T^0.0075
+running time as a function of N and T:  ~ 2.7E-8 * N^2.3 T^1.0
 
 
 /**********************************************************************
@@ -149,4 +150,7 @@ thinking about possible solutions.
  *  you enjoyed doing it.
  *****************************************************************************/
 Calculating the running time function is much easier if you have Excel graph the 
-points and draw a linear trendline for you.
+points and draw a linear trendline for you. It may be that I didn't create enough 
+data points to get a reliable ratio, but while doubling N, it did not seem to 
+converge anywhere in particular, but the Excel graph of the lg vs lg gave me an 
+extremely reliable slope.

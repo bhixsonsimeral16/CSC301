@@ -9,6 +9,8 @@ public class Percolation {
 	private int dim;                      //dimension size of the grid
 	private WeightedQuickUnionUF uf;      //union-find object
 	private WeightedQuickUnionUF ufNoBot; //union-find object with no virtual bottom
+//	private QuickUnionUF ufNoBot;
+//	private QuickUnionUF uf;
 	private int openSites;                //number of open sites
 	private int top;                      //int representing the virtual top node
 	private int bot;                      //int representing the virtual bottom node
@@ -27,6 +29,9 @@ public class Percolation {
 		//as well as a virtual node for the bottom and a node for each point in the Percolation
 		this.uf = new WeightedQuickUnionUF((dim*dim)+2);
 		this.ufNoBot = new WeightedQuickUnionUF((dim*dim)+1);
+		
+//		this.uf = new QuickUnionUF((dim*dim)+2);
+//		this.ufNoBot = new QuickUnionUF((dim*dim)+1);
 		
 		this.top = dim*dim;         //int representing the virtual top node
 		this.bot = (dim*dim)+1;     //int representing the virtual bottom node
@@ -125,13 +130,13 @@ public class Percolation {
 	
 	// unit testing (required)
 	public static void main(String[] args){
-		int N = 100;         //grid size is N*N
+		int N = 25;         //grid size is N*N
 		int T = 100;         //perform T trials
 		Stopwatch timer2  = new Stopwatch();
 		PercolationStats perc = new PercolationStats(N, T);
 		double time2 = timer2.elapsedTime();
 		double prevTime = time2;
-		for (T = 200; true; T = T * 2) {
+		for (N = 50; true; N = N * 2) {
 			Stopwatch timer = new Stopwatch();
 			PercolationStats p = new PercolationStats(N, T);
 			double time = timer.elapsedTime();
