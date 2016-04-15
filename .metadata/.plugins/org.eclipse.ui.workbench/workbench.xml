@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="1024" width="1225" x="65" y="24">
+<window height="1023" width="746" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -14,7 +14,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="116" y="30"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
@@ -29,29 +29,14 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
 <part id="0"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InteractivePercolationVisualizer.java" partName="InteractivePercolationVisualizer.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/percolationEclipse/src/InteractivePercolationVisualizer.java" title="InteractivePercolationVisualizer.java" tooltip="percolationEclipse/src/InteractivePercolationVisualizer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/percolationEclipse/src/InteractivePercolationVisualizer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="749" selectionTopPixel="72"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Percolation.java" partName="Percolation.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/percolationEclipse/src/Percolation.java" title="Percolation.java" tooltip="percolationEclipse/src/Percolation.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/percolationEclipse/src/Percolation.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4253" selectionTopPixel="1867"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PercolationStats.java" partName="PercolationStats.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/percolationEclipse/src/PercolationStats.java" title="PercolationStats.java" tooltip="percolationEclipse/src/PercolationStats.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/percolationEclipse/src/PercolationStats.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1578" selectionTopPixel="336"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PercolationVisualizer.java" partName="PercolationVisualizer.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/percolationEclipse/src/PercolationVisualizer.java" title="PercolationVisualizer.java" tooltip="percolationEclipse/src/PercolationVisualizer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/percolationEclipse/src/PercolationVisualizer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1289" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Deque.java" partName="Deque.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/RandomizedQueuesandDeques/src/Deque.java" title="Deque.java" tooltip="RandomizedQueuesandDeques/src/Deque.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RandomizedQueuesandDeques/src/Deque.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2593" selectionTopPixel="1743"/>
 </editor>
 </editors>
 <views>
@@ -61,7 +46,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -121,7 +107,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -296,163 +282,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/InteractivePercolationVisualizer.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/Percolation.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/PercolationStats.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/PercolationVisualizer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/PercolationVisualizer.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/InteractivePercolationVisualizer.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/PercolationStats.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/percolationEclipse/src/InteractivePercolationVisualizer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RandomizedQueuesandDeques/src/Deque.java"/>
 </editors>
-<item historyLabel="PercolationVisualizer.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="78" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="622" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="1046" y="7"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="1155" y="6"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="82" y="0"/>
-</item>
-<item historyLabel="PercolationVisualizer.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="666" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
+<item historyLabel="Percolation.java" index="0">
 <position info="not_deleted" x="4032" y="0"/>
 </item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="666" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="805" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="4032" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="805" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="4060" y="0"/>
-</item>
-<item historyLabel="PercolationVisualizer.java" index="3">
-<position info="not_deleted" x="1289" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="930" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="805" y="0"/>
-</item>
-<item historyLabel="PercolationVisualizer.java" index="3">
-<position info="not_deleted" x="1289" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="4060" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="1016" y="0"/>
-</item>
-<item historyLabel="PercolationVisualizer.java" index="3">
-<position info="not_deleted" x="1289" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="4060" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="1016" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
+<item historyLabel="PercolationStats.java" index="1">
 <position info="not_deleted" x="1058" y="0"/>
 </item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="4060" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="930" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="1058" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="1069" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="2050" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="930" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="1069" y="0"/>
-</item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="0">
-<position info="not_deleted" x="930" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="2050" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="1069" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="2050" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="811" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="4032" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="633" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="3886" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="722" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="4032" y="0"/>
-</item>
-<item historyLabel="PercolationStats.java" index="2">
-<position info="not_deleted" x="1058" y="0"/>
-</item>
-<item historyLabel="Percolation.java" index="1">
+<item historyLabel="Percolation.java" index="0">
 <position info="not_deleted" x="261" y="0"/>
 </item>
-<item historyLabel="PercolationStats.java" index="2">
+<item historyLabel="PercolationStats.java" index="1">
 <position info="not_deleted" x="1578" y="0"/>
 </item>
-<item historyLabel="Percolation.java" index="1">
+<item historyLabel="Percolation.java" index="0">
 <position info="not_deleted" x="261" y="0"/>
 </item>
-<item historyLabel="PercolationVisualizer.java" index="4">
+<item historyLabel="PercolationVisualizer.java" index="2">
 <position info="not_deleted" x="80" y="0"/>
 </item>
-<item historyLabel="PercolationVisualizer.java" index="4">
+<item historyLabel="PercolationVisualizer.java" index="2">
 <position info="not_deleted" x="1289" y="0"/>
 </item>
-<item historyLabel="InteractivePercolationVisualizer.java" index="5">
+<item historyLabel="InteractivePercolationVisualizer.java" index="3">
 <position info="not_deleted" x="931" y="0"/>
 </item>
-<item historyLabel="PercolationStats.java" index="6">
+<item historyLabel="PercolationStats.java" index="4">
 <position info="not_deleted" x="1578" y="0"/>
 </item>
-<item active="true" historyLabel="Percolation.java" index="1">
-<position info="not_deleted" x="3901" y="0"/>
+<item historyLabel="Percolation.java" index="0">
+<position info="not_deleted" x="4253" y="0"/>
+</item>
+<item historyLabel="InteractivePercolationVisualizer.java" index="5">
+<position info="not_deleted" x="749" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="69" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="133" y="9"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="326" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="147" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="132" y="10"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1463" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="239" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="241" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="996" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1004" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2916" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="3015" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="3071" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="3302" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="592" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="594" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1053" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="940" y="22"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2827" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1500" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="989" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1053" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="3193" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="3188" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1612" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2003" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2004" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="1697" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2619" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2198" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2237" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2372" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2198" y="0"/>
+</item>
+<item historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2372" y="0"/>
+</item>
+<item active="true" historyLabel="Deque.java" index="6">
+<position info="not_deleted" x="2619" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -471,6 +457,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Deque.java" tooltip="RandomizedQueuesandDeques/src/Deque.java">
+<persistable path="/RandomizedQueuesandDeques/src/Deque.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PercolationVisualizer.java" tooltip="percolationEclipse/src/PercolationVisualizer.java">
 <persistable path="/percolationEclipse/src/PercolationVisualizer.java"/>
 </file>
