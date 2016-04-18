@@ -6,7 +6,7 @@ public class Subset {
 		int print = Integer.parseInt(args[0]);
 		RandomizedQueue rq = new RandomizedQueue();
 		
-		while(StdIn.hasNextChar()){
+		while(!StdIn.isEmpty()){
 			rq.enqueue(StdIn.readString());
 		}
 		for(int i = 0; i < print; i++){

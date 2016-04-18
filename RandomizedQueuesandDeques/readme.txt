@@ -21,7 +21,7 @@ last item in the queue to make adding and removing items faster.
 
 I implemented the randomized queue with a resizing array originally because I 
 wanted to implement both data structures, but eventually I realized that 
-randomizing operations is only really possible in constant time if each of the 
+randomizing operations are only really possible in constant time if each of the 
 items is indexed in some way.  Therefore I created the resizing array with a 
 counter for the number of items contained within. The random functions will 
 randomly choose between any of the indexes that contain an item.
@@ -40,7 +40,7 @@ randomly choose between any of the indexes that contain an item.
 
 Randomized Queue: 16 overhead + 4 int reference + 4 padding + 24 array overhead
 + 6*8N (N object references in the array, potential to only have 1/4 of array full, 
-plus and array of 1/2 size is created during the resize operation)             
+plus an array of 1/2 size is created during the resize operation)             
 ~  48N  bytes 
 
 Deque: 16 overhead + 8*2 object references + 4 int reference + 4 padding + 48N 
@@ -65,6 +65,7 @@ Deque: 16 overhead + 8*2 object references + 4 int reference + 4 padding + 48N
  *  attribute them by name.
  *****************************************************************************/
 Emily Andrulis helped me organize my Deque.java code so that it made more sense.
+Nigel helped make my dequeue() faster.
 
 /******************************************************************************
  *  Describe any serious problems you encountered.

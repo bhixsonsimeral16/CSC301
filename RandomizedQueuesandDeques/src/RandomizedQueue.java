@@ -2,6 +2,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.algs4.Stopwatch;
 
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
@@ -10,8 +11,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	
 	// construct an empty randomized queue
 	public RandomizedQueue() {
-		this.resizableArr = (Item[]) new Object[1];
-		this.resizableArr[0] = null;
+		this.resizableArr = (Item[]) new Object[2];
 		this.items = 0;
 	}
 
@@ -47,10 +47,16 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		int rand = StdRandom.uniform(items);
 		Item item = resizableArr[rand];
 		
-		//delete the item from the array and move everything over one space
-		for(int i = rand; i < items; i++){
-			resizableArr[i] = resizableArr[i + 1];
-		}
+		// This code makes it so that iterators will not work with dequeue()
+		// move the last item to the place of the removed item and set the placement of the last item to null
+		resizableArr[rand] = resizableArr[items - 1];
+		resizableArr[items - 1] = null;
+		
+		// Following code has been commented because it is too slow
+//		// delete the item from the array and move everything over one space
+//		for(int i = rand; i < items; i++){
+//			resizableArr[i] = resizableArr[i + 1];
+//		}
 		items--;
 		
 		// resize if necessary
@@ -78,7 +84,9 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 			li.shuffleArr[i] = i;
 		}
 		
-		// Fisher–Yates shuffle array function
+		
+		// Shuffle the array indexes which contain items
+		// Fisher-Yates shuffle array function
 		// modified code taken from: http://stackoverflow.com/questions/1519736/random-shuffling-of-an-array
 		int index, temp;
 		
@@ -89,6 +97,14 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	        li.shuffleArr[index] = li.shuffleArr[i];
 	        li.shuffleArr[i] = temp;
 	    }
+		
+		
+		
+		// Array of shuffled items, using the shuffled indexes
+		for (int i = 0; i < li.shuffleArr.length; i++){
+			li.shuffled[i] = resizableArr[li.shuffleArr[i]];
+		}
+		
 		
 		return li;
 	}
@@ -121,6 +137,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		// will go through the resizableArray
 		private int[] shuffleArr = new int[size];
 		
+		private Item[] shuffled = (Item[]) new Object[size];
+		
 		public boolean hasNext(){
 			return (index < size);
 		}
@@ -130,10 +148,11 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 				throw new NoSuchElementException("There are no more elements");
 			}
 			
-			Item item = resizableArr[shuffleArr[index]];
+			Item item = shuffled[index];
 			index++;
 			return item;
 		}
+		
 		public void remove() throws UnsupportedOperationException{
 			throw new UnsupportedOperationException("The remove() method is not supported");
 		}
@@ -141,12 +160,30 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
 	// unit testing (required)
 	public static void main(String[] args) {
-		RandomizedQueue<Integer> r = new RandomizedQueue<Integer>();
-		for(int i = 0; i < 10; i++){
+//		for(int N = 1; true; N = N*2){
+			RandomizedQueue<Integer> r = new RandomizedQueue<Integer>();
+			for(int i = 0; i < 10; i++){
+				
+				r.enqueue(i);
+				//System.out.println(r.items + "   " + ((Object[])r.resizableArr).length );
+			}
 			
-			r.enqueue(i);
-			//System.out.println(r.items );
-		}
+			for(Integer i : r){
+				System.out.println(r.dequeue());
+				
+			}
+//			Stopwatch timer = new Stopwatch();
+//			for (int i = 0; i < 10; i++) {
+//
+//				r.dequeue();
+//				//System.out.println(r.items + "   " + ((Object[])r.resizableArr).length );
+//			}
+			
+//			System.out.println();
+//			System.out.println("N = " + N);
+//			System.out.println("Done in: " + timer.elapsedTime());
+//		}
+		
 //		Iterator<Integer> i1 = r.iterator();
 //		Iterator<Integer> i2 = r.iterator();
 //		
@@ -161,17 +198,17 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 //			Integer i = i2.next();
 //			System.out.println(i);
 //		}
-		for (int i = 0; i < 10; i++){
-			
-			System.out.println(r.dequeue());
-		}
-		for(int i = 0; i < 10; i++){
-			
-			r.enqueue(i);
-			//System.out.println(r.items );
-		}
-		System.out.println();
-		System.out.println(r.sample());
+//		for (int i = 0; i < 10; i++){
+//			
+//			System.out.println(r.dequeue());
+//		}
+//		for(int i = 0; i < 10; i++){
+//			
+//			r.enqueue(i);
+//			//System.out.println(r.items );
+//		}
+//		System.out.println();
+//		System.out.println(r.sample());
 		
 	}
 }
