@@ -4,7 +4,7 @@
  *  Operating system: Windows 10
  *  Compiler:
  *  Text editor / IDE: Sublime Text 2 / Eclipse
- *  Hours to complete assignment (optional):
+ *  Hours to complete assignment (optional): 9 hours
  ******************************************************************************/
 
 
@@ -46,9 +46,12 @@ plus an array of 1/2 size is created during the resize operation)
 Deque: 16 overhead + 8*2 object references + 4 int reference + 4 padding + 48N 
 (Node class: 16 overhead + 8 nested class + 8*3 object reference)
 40 + 48N bytes
+
+**Note: I am not certain if you wanted me to add the memory that is used when 
+resizing the array or not, so I put in the absolute worst case, which does include 
+the extra memory.
+
 ~  48N  bytes
-
-
 
 
 /******************************************************************************
