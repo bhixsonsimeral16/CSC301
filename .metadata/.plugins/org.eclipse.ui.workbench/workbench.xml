@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="1022" maximized="true" width="740" x="227" y="24">
+<window height="1026" width="847" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="129" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -31,22 +31,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Deque.java" partName="Deque.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/RandomizedQueuesandDeques/src/Deque.java" title="Deque.java" tooltip="RandomizedQueuesandDeques/src/Deque.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RandomizedQueuesandDeques/src/Deque.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3168" selectionTopPixel="1938"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Term.java" partName="Term.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/Term.java" title="Term.java" tooltip="AutocompleteMe/src/Term.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/Term.java"/>
+<editorState selectionHorizontalPixel="15" selectionLength="0" selectionOffset="2511" selectionTopPixel="437"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomizedQueue.java" partName="RandomizedQueue.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/RandomizedQueuesandDeques/src/RandomizedQueue.java" title="RandomizedQueue.java" tooltip="RandomizedQueuesandDeques/src/RandomizedQueue.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RandomizedQueuesandDeques/src/RandomizedQueue.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4639" selectionTopPixel="1469"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subset.java" partName="Subset.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/RandomizedQueuesandDeques/src/Subset.java" title="Subset.java" tooltip="RandomizedQueuesandDeques/src/Subset.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RandomizedQueuesandDeques/src/Subset.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="257" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinarySearchDeluxe.java" partName="BinarySearchDeluxe.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/BinarySearchDeluxe.java" title="BinarySearchDeluxe.java" tooltip="AutocompleteMe/src/BinarySearchDeluxe.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/BinarySearchDeluxe.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2302" selectionTopPixel="653"/>
 </editor>
 </editors>
 <views>
@@ -56,8 +51,9 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (4 items)"/>
+<category IMemento.internal.id="Warnings (11 items)"/>
 <category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -292,159 +288,159 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RandomizedQueuesandDeques/src/Deque.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/Term.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RandomizedQueuesandDeques/src/RandomizedQueue.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RandomizedQueuesandDeques/src/Subset.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/BinarySearchDeluxe.java"/>
 </editors>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="1697" y="0"/>
+<item historyLabel="RandomizedQueue.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2619" y="0"/>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1456" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1429" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1456" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1439" y="12"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1986" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1836" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1852" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1986" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="2505" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="2635" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="2674" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="833" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1083" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="694" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1076" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1076" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="480" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="373" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="480" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="471" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="473" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1387" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1477" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="30" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1477" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="2618" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2311" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="401" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2311" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="999" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="457" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="956" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="1456" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="956" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="771" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2178" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="1984" y="0"/>
+</item>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="2511" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
 <position info="not_deleted" x="2198" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2237" y="0"/>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2024" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2372" y="0"/>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2165" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2198" y="0"/>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="2511" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2372" y="0"/>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2311" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2619" y="0"/>
+<item historyLabel="Term.java" index="0">
+<position info="not_deleted" x="2511" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2311" y="0"/>
 </item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="5613" y="0"/>
+<item historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2308" y="0"/>
 </item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="338" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="5613" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4480" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="5006" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4694" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4694" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4544" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4544" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4409" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4409" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="455" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4536" y="79"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4773" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="367" y="14"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="257" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4885" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="257" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4885" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="2725" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="2878" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4689" y="0"/>
-</item>
-<item active="true" historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4681" y="0"/>
+<item active="true" historyLabel="BinarySearchDeluxe.java" index="2">
+<position info="not_deleted" x="2311" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -452,6 +448,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -459,15 +458,22 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subset.java" tooltip="RandomizedQueuesandDeques/src/Subset.java">
-<persistable path="/RandomizedQueuesandDeques/src/Subset.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinarySearchDeluxe.java" tooltip="AutocompleteMe/src/BinarySearchDeluxe.java">
+<persistable path="/AutocompleteMe/src/BinarySearchDeluxe.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomizedQueue.java" tooltip="RandomizedQueuesandDeques/src/RandomizedQueue.java">
 <persistable path="/RandomizedQueuesandDeques/src/RandomizedQueue.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Term.java" tooltip="AutocompleteMe/src/Term.java">
+<persistable path="/AutocompleteMe/src/Term.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subset.java" tooltip="RandomizedQueuesandDeques/src/Subset.java">
+<persistable path="/RandomizedQueuesandDeques/src/Subset.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Deque.java" tooltip="RandomizedQueuesandDeques/src/Deque.java">
 <persistable path="/RandomizedQueuesandDeques/src/Deque.java"/>
