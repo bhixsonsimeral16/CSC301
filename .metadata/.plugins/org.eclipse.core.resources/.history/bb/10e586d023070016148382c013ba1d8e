@@ -1,0 +1,35 @@
+import edu.princeton.cs.algs4.MergeX;
+
+public class Autocomplete {
+	private final int N;
+	private final Term[] autoComplete;
+	
+	// Initializes the data structure from the given array of terms.
+    public Autocomplete(Term[] terms){
+    	this.N = terms.length;
+    	this.autoComplete = new Term[N];
+    	MergeX.sort(terms, Term.byReverseWeightOrder());
+    	
+    	for(int i = 0; i < N; i++){
+    		this.autoComplete[i] = terms[i];
+    	}
+    }
+
+    // Returns all terms that start with the given prefix, in descending order of weight.
+    public Term[] allMatches(String prefix){
+    	Term[] term = this.autoComplete;
+    	MergeX.sort(term);
+    	int first = firstIndexOf(term, prefix, Term.byPrefixOrder(prefix.length()));
+    	int last = lastIndexOf(term, prefix, Term.byPrefixOrder(prefix.length()));
+    	
+    	Term[] terms = new Term[last - first];
+    	for(int i = 0; i < last-first; i++){
+    		
+    	}
+    }
+
+    // Returns the number of terms that start with the given prefix.
+    public int numberOfMatches(String prefix){
+    	
+    }
+}
