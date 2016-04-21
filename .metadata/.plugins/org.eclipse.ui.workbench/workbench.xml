@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="1025" maximized="true" width="949" x="65" y="24">
+<window height="998" width="861" x="818" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="143" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -38,17 +38,17 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Term.java" partName="Term.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/Term.java" title="Term.java" tooltip="AutocompleteMe/src/autoCompleteMe/Term.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Term.java" partName="Term.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/Term.java" title="Term.java" tooltip="AutocompleteMe/src/autoCompleteMe/Term.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/autoCompleteMe/Term.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2644" selectionTopPixel="652"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinarySearchDeluxe.java" partName="BinarySearchDeluxe.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java" title="BinarySearchDeluxe.java" tooltip="AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1445" selectionTopPixel="539"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1445" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Autocomplete.java" partName="Autocomplete.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/Autocomplete.java" title="Autocomplete.java" tooltip="AutocompleteMe/src/autoCompleteMe/Autocomplete.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Autocomplete.java" partName="Autocomplete.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/Autocomplete.java" title="Autocomplete.java" tooltip="AutocompleteMe/src/autoCompleteMe/Autocomplete.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/autoCompleteMe/Autocomplete.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="999" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="23" selectionLength="0" selectionOffset="1136" selectionTopPixel="289"/>
 </editor>
 </editors>
 <views>
@@ -253,7 +253,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24906133" ratioLeft="199" ratioRight="600" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.12470588" ratioLeft="106" ratioRight="744" relationship="2" relative="left"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@57a143f6" ratio="0.74972916" ratioLeft="692" ratioRight="231" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -263,7 +263,7 @@
 </folder>
 </info>
 <info folder="true" part="bottom" ratio="0.4978355" ratioLeft="115" ratioRight="116" relationship="4" relative="org.eclipse.ui.internal.ViewStack@57a143f6">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
@@ -295,16 +295,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AutocompleteMe/src/autoCompleteMe/wiktionary.txt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AutocompleteMe/wiktionary.txt"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AutocompleteMe/wiktionary.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/autoCompleteMe/Autocomplete.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java"/>
 </editors>
-<item historyLabel="BinarySearchDeluxe.java" index="0">
-<position info="not_deleted" x="2031" y="0"/>
-</item>
-<item historyLabel="BinarySearchDeluxe.java" index="0">
-<position info="not_deleted" x="2055" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="72" y="0"/>
-</item>
 <item historyLabel="Autocomplete.java" index="1">
 <position info="not_deleted" x="58" y="0"/>
 </item>
@@ -443,8 +436,17 @@
 <item historyLabel="Autocomplete.java" index="1">
 <position info="not_deleted" x="999" y="0"/>
 </item>
-<item active="true" historyLabel="Term.java" index="2">
+<item historyLabel="Term.java" index="2">
 <position info="not_deleted" x="2644" y="0"/>
+</item>
+<item historyLabel="Autocomplete.java" index="7">
+<position info="not_deleted" x="999" y="0"/>
+</item>
+<item historyLabel="BinarySearchDeluxe.java" index="8">
+<position info="not_deleted" x="1445" y="0"/>
+</item>
+<item active="true" historyLabel="Autocomplete.java" index="7">
+<position info="not_deleted" x="999" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -452,12 +454,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -465,7 +461,6 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@57a143f6"/>
 <trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
