@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
-<window height="998" width="861" x="818" y="24">
+<window height="1026" width="1005" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="143" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="287" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -32,23 +32,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Term.java" partName="Term.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/Term.java" title="Term.java" tooltip="AutocompleteMe/src/autoCompleteMe/Term.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/autoCompleteMe/Term.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2644" selectionTopPixel="652"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinarySearchDeluxe.java" partName="BinarySearchDeluxe.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java" title="BinarySearchDeluxe.java" tooltip="AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1445" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Autocomplete.java" partName="Autocomplete.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/AutocompleteMe/src/autoCompleteMe/Autocomplete.java" title="Autocomplete.java" tooltip="AutocompleteMe/src/autoCompleteMe/Autocomplete.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutocompleteMe/src/autoCompleteMe/Autocomplete.java"/>
-<editorState selectionHorizontalPixel="23" selectionLength="0" selectionOffset="1136" selectionTopPixel="289"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" partName="Board.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/8Puzzle/src/puzzle/Board.java" title="Board.java" tooltip="8Puzzle/src/puzzle/Board.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/8Puzzle/src/puzzle/Board.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2022" selectionTopPixel="2357"/>
 </editor>
 </editors>
 <views>
@@ -253,7 +243,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.12470588" ratioLeft="106" ratioRight="744" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.20854272" ratioLeft="166" ratioRight="630" relationship="2" relative="left"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@57a143f6" ratio="0.74972916" ratioLeft="692" ratioRight="231" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -288,165 +278,157 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/autoCompleteMe/Autocomplete.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/autoCompleteMe/Term.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=AutocompleteMe/\/home\/local\/CORNELL-COLLEGE\/bhixsonsimeral16\/Downloads\/algs4.jar&lt;edu.princeton.cs.algs4(In.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AutocompleteMe/src/autoCompleteMe/wiktionary.txt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AutocompleteMe/wiktionary.txt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/AutocompleteMe/wiktionary.txt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/autoCompleteMe/Autocomplete.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutocompleteMe/src/autoCompleteMe/BinarySearchDeluxe.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/8Puzzle/src/puzzle/Board.java"/>
 </editors>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="58" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="535" y="0"/>
 </item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="589" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="538" y="0"/>
 </item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="613" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="798" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="807" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="801" y="0"/>
 </item>
-<item historyLabel="BinarySearchDeluxe.java" index="0">
-<position info="not_deleted" x="2055" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="820" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="807" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="771" y="0"/>
-</item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="613" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1525" y="0"/>
-</item>
-<item historyLabel="BinarySearchDeluxe.java" index="0">
-<position info="not_deleted" x="2434" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1560" y="0"/>
-</item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="516" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1560" y="0"/>
-</item>
-<item historyLabel="BinarySearchDeluxe.java" index="0">
-<position info="not_deleted" x="2434" y="0"/>
-</item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="516" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1560" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1638" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1768" y="2"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2408" y="5"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1939" y="0"/>
-</item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="516" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2202" y="0"/>
-</item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="2644" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2202" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1725" y="34"/>
-</item>
-<item historyLabel="In.class" index="3">
-<position info="not_deleted" x="7203" y="73"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2201" y="0"/>
-</item>
-<item historyLabel="wiktionary.txt" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Autocomplete.java" index="1">
+<item historyLabel="Board.java" index="0">
 <position/>
 </item>
-<item historyLabel="BinarySearchDeluxe.java" index="0">
-<position info="not_deleted" x="799" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2161" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1218" y="0"/>
 </item>
-<item historyLabel="wiktionary.txt" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1922" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2161" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2911" y="0"/>
 </item>
-<item historyLabel="wiktionary.txt" index="5">
-<position info="not_deleted" x="12414" y="7"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2914" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2666" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2982" y="0"/>
 </item>
-<item historyLabel="wiktionary.txt" index="6">
-<position info="not_deleted" x="184489" y="10"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1218" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1616" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1437" y="0"/>
 </item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="2644" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1440" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1616" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1805" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1626" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="652" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1092" y="44"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="684" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="2477" y="61"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2788" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="1092" y="44"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2807" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="999" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position/>
 </item>
-<item historyLabel="BinarySearchDeluxe.java" index="0">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2400" y="0"/>
 </item>
-<item historyLabel="Autocomplete.java" index="1">
-<position info="not_deleted" x="999" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3570" y="0"/>
 </item>
-<item historyLabel="Term.java" index="2">
-<position info="not_deleted" x="2644" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position/>
 </item>
-<item historyLabel="Autocomplete.java" index="7">
-<position info="not_deleted" x="999" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2545" y="0"/>
 </item>
-<item historyLabel="BinarySearchDeluxe.java" index="8">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3888" y="0"/>
 </item>
-<item active="true" historyLabel="Autocomplete.java" index="7">
-<position info="not_deleted" x="999" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3882" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3938" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3901" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3957" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1182" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1186" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1185" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3856" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3809" y="2"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3844" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="617" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2081" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2308" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2308" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2472" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2489" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2498" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="4048" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2237" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2304" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2004" y="0"/>
+</item>
+<item active="true" historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2022" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -454,6 +436,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -462,10 +447,14 @@
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
 <trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@57a143f6"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" tooltip="8Puzzle/src/puzzle/Board.java">
+<persistable path="/8Puzzle/src/puzzle/Board.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="wiktionary.txt" tooltip="AutocompleteMe/wiktionary.txt">
 <persistable path="/AutocompleteMe/wiktionary.txt"/>
 </file>
@@ -507,9 +496,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InteractivePercolationVisualizer.java" tooltip="percolation/src/InteractivePercolationVisualizer.java">
 <persistable path="/percolation/src/InteractivePercolationVisualizer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PercolationVisualizer.java" tooltip="percolation/src/PercolationVisualizer.java">
-<persistable path="/percolation/src/PercolationVisualizer.java"/>
 </file>
 </mruList>
 </workbench>

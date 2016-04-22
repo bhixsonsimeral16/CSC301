@@ -1,0 +1,120 @@
+package puzzle;
+
+public class Board {
+	private final int[][] boardStart;
+	private final int SIZE;
+	private final int hamming;
+	private final int manhattan;
+	
+	// construct a board from an N-by-N array of tiles
+	// (where tiles[i][j] = tile at row i, column j)
+	public Board(int[][] tiles) {
+		this.boardStart = new int[tiles.length][tiles[0].length];
+		this.SIZE = boardStart.length;
+		for(int i = 0; i < tiles.length; i++){
+			for(int j = 0; j < tiles.length; j++){
+				boardStart[i][j] = tiles[i][j];
+			}
+		}
+		this.hamming = hamming();
+		this.manhattan = manhattan();
+	}
+
+	// return tile at row i, column j (or 0 if blank)
+	public int tileAt(int i, int j) {
+		return boardStart[i][j];
+	}
+
+	// board size N
+	public int size() {
+		return SIZE;
+	}
+
+	// number of tiles out of place
+	public int hamming() {
+		int hamming = 0;
+		for(int i = 0; i < SIZE; i++){
+			for(int j = 0; j < SIZE; j++){
+				if(i != SIZE -1 && j != SIZE -1){
+					if(boardStart[i][j] != 1 + (SIZE * i) + j){
+						hamming++;
+					}
+				}
+			}
+		}
+		return hamming;
+	}
+
+	// sum of Manhattan distances between tiles and goal
+	public int manhattan() {
+		int manhattan = 0;
+		for(int i = 0; i < SIZE; i++){
+			for(int j = 0; j < SIZE; j++){
+				if(boardStart[i][j] != 0){
+					
+					//subtract one to make the value line up with the int[][] better
+					int num = boardStart[i][j] - 1;
+					
+					//calculate target row and column
+					int col = num % SIZE;
+					int row = (int) Math.floor(num / SIZE);
+					
+					int colDiff = Math.abs(col - j);
+					int rowDiff = Math.abs(row - i);
+					
+					manhattan += (colDiff + rowDiff);
+				}
+			}
+		}
+		return manhattan;
+	}
+
+	// is this board the goal board?
+	public boolean isGoal() {
+		return hamming == 0;
+	}
+
+	// is this board solvable?
+	public boolean isSolvable() {
+		if(SIZE % 2 == 1){
+			
+		}
+	}
+
+	// does this board equal y?
+	public boolean equals(Object y) {
+		if (y.getClass() == this.getClass()) {
+			for (int i = 0; i < boardStart.length; i++) {
+				for (int j = 0; j < boardStart.length; j++) {
+					if (this.boardStart[i][j] != ((Board) y).boardStart[i][j]) {
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+		else return false;
+	}
+
+	// all neighboring boards
+	public Iterable<Board> neighbors() {
+	}
+
+	// string representation of this board (in the output format specified below)
+	public String toString() {
+	}
+
+	// unit testing (required)
+	public static void main(String[] args) {
+		int[][] testArr = {{1,2,3},{7,8,0},{4,5,6}};
+		int[][] testArr2 = {{2,1,3},{7,8,0},{4,5,6}};
+		
+		Board b = new Board(testArr);
+		Board c = new Board(testArr2);
+		
+		System.out.println(b.equals(c));
+		System.out.println(b.manhattan() + "  " + b.hamming());
+		System.out.println(c.manhattan() + "  " + c.hamming());
+		
+	}
+}
