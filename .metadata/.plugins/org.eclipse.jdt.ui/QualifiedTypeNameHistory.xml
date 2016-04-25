@@ -5,13 +5,18 @@
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.WeightedQuickUnionUF"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.QuickUnionUF"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdDraw"/>
-<fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdOut"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
 <fullyQualifiedTypeName name="Deque"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdRandom"/>
-<fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdIn"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.Stopwatch"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdIn"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.MinPQ"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.Queue"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.In"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdOut"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.Stack"/>
 </qualifiedTypeNameHistroy>

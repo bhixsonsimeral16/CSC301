@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
-<window height="1022" maximized="true" width="740" x="227" y="24">
+<window height="1026" width="1005" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -15,10 +15,12 @@
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="287" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -30,42 +32,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Deque.java" partName="Deque.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/RandomizedQueuesandDeques/src/Deque.java" title="Deque.java" tooltip="RandomizedQueuesandDeques/src/Deque.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RandomizedQueuesandDeques/src/Deque.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3168" selectionTopPixel="1938"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomizedQueue.java" partName="RandomizedQueue.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/RandomizedQueuesandDeques/src/RandomizedQueue.java" title="RandomizedQueue.java" tooltip="RandomizedQueuesandDeques/src/RandomizedQueue.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RandomizedQueuesandDeques/src/RandomizedQueue.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4639" selectionTopPixel="1469"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subset.java" partName="Subset.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/RandomizedQueuesandDeques/src/Subset.java" title="Subset.java" tooltip="RandomizedQueuesandDeques/src/Subset.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RandomizedQueuesandDeques/src/Subset.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="257" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" partName="Board.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/8Puzzle/src/puzzle/Board.java" title="Board.java" tooltip="8Puzzle/src/puzzle/Board.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/8Puzzle/src/puzzle/Board.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2022" selectionTopPixel="2357"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
-</view>
-<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (4 items)"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
-</viewState>
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
@@ -115,7 +93,9 @@
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
 </views>
 <perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
@@ -233,11 +213,15 @@
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.jdt.ui.JavadocView"/>
-<view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.jdt.ui.JavadocView" style="0">
+<fastViews>
+<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
@@ -259,22 +243,24 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24906133" ratioLeft="199" ratioRight="600" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.74972916" ratioLeft="692" ratioRight="231" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.20854272" ratioLeft="166" ratioRight="630" relationship="2" relative="left"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@57a143f6" ratio="0.74972916" ratioLeft="692" ratioRight="231" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottom" ratio="0.4978355" ratioLeft="115" ratioRight="116" relationship="4" relative="org.eclipse.ui.internal.ViewStack@57a143f6">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.75" ratioLeft="450" ratioRight="150" relationship="2" relative="org.eclipse.ui.editorss">
@@ -292,159 +278,157 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RandomizedQueuesandDeques/src/Deque.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RandomizedQueuesandDeques/src/RandomizedQueue.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RandomizedQueuesandDeques/src/Subset.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/8Puzzle/src/puzzle/Board.java"/>
 </editors>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="1697" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="535" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2619" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="538" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2198" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="798" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="801" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="820" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1218" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1922" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2911" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2914" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2982" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1218" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1437" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1440" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1805" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="652" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="684" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2788" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2807" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2400" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3570" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2545" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3888" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3882" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3938" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3901" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3957" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1182" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1186" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="1185" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3856" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3809" y="2"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="3844" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="617" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2056" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2081" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2308" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2308" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2472" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2489" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2498" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="4048" y="0"/>
+</item>
+<item historyLabel="Board.java" index="0">
 <position info="not_deleted" x="2237" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2372" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2304" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2198" y="0"/>
+<item historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2004" y="0"/>
 </item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2372" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="2619" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="5613" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="338" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="5613" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4480" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="5006" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4694" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4694" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4544" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4544" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4409" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="Deque.java" index="0">
-<position info="not_deleted" x="3168" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4409" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="455" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4536" y="79"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4773" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="367" y="14"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="257" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4885" y="0"/>
-</item>
-<item historyLabel="Subset.java" index="2">
-<position info="not_deleted" x="257" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4885" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="2725" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="2878" y="0"/>
-</item>
-<item historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4689" y="0"/>
-</item>
-<item active="true" historyLabel="RandomizedQueue.java" index="1">
-<position info="not_deleted" x="4681" y="0"/>
+<item active="true" historyLabel="Board.java" index="0">
+<position info="not_deleted" x="2022" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -452,6 +436,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -459,15 +446,38 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@57a143f6"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subset.java" tooltip="RandomizedQueuesandDeques/src/Subset.java">
-<persistable path="/RandomizedQueuesandDeques/src/Subset.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" tooltip="8Puzzle/src/puzzle/Board.java">
+<persistable path="/8Puzzle/src/puzzle/Board.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="wiktionary.txt" tooltip="AutocompleteMe/wiktionary.txt">
+<persistable path="/AutocompleteMe/wiktionary.txt"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="wiktionary.txt" tooltip="AutocompleteMe/src/autoCompleteMe/wiktionary.txt">
+<persistable path="/AutocompleteMe/src/autoCompleteMe/wiktionary.txt"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="In.class" tooltip="edu.princeton.cs.algs4.In">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=AutocompleteMe/\/home\/local\/CORNELL-COLLEGE\/bhixsonsimeral16\/Downloads\/algs4.jar&lt;edu.princeton.cs.algs4(In.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Autocomplete.java" tooltip="AutocompleteMe/src/Autocomplete.java">
+<persistable path="/AutocompleteMe/src/Autocomplete.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinarySearchDeluxe.java" tooltip="AutocompleteMe/src/BinarySearchDeluxe.java">
+<persistable path="/AutocompleteMe/src/BinarySearchDeluxe.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomizedQueue.java" tooltip="RandomizedQueuesandDeques/src/RandomizedQueue.java">
 <persistable path="/RandomizedQueuesandDeques/src/RandomizedQueue.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Term.java" tooltip="AutocompleteMe/src/Term.java">
+<persistable path="/AutocompleteMe/src/Term.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subset.java" tooltip="RandomizedQueuesandDeques/src/Subset.java">
+<persistable path="/RandomizedQueuesandDeques/src/Subset.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Deque.java" tooltip="RandomizedQueuesandDeques/src/Deque.java">
 <persistable path="/RandomizedQueuesandDeques/src/Deque.java"/>
@@ -486,15 +496,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InteractivePercolationVisualizer.java" tooltip="percolation/src/InteractivePercolationVisualizer.java">
 <persistable path="/percolation/src/InteractivePercolationVisualizer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PercolationVisualizer.java" tooltip="percolation/src/PercolationVisualizer.java">
-<persistable path="/percolation/src/PercolationVisualizer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PercolationStats.java" tooltip="percolation/src/PercolationStats.java">
-<persistable path="/percolation/src/PercolationStats.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Percolation.java" tooltip="percolation/src/Percolation.java">
-<persistable path="/percolation/src/Percolation.java"/>
 </file>
 </mruList>
 </workbench>

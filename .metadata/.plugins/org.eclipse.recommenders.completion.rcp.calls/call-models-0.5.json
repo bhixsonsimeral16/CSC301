@@ -19,5 +19,15 @@
     "location": "C:\\Users\\Brian\\Documents\\CSC\\CSC301\\RandomizedQueuesandDeques\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027C:\\Users\\Brian\\Documents\\CSC\\CSC301\\RandomizedQueuesandDeques\\src\u0027. Skipped."
+  },
+  "C:\\Program Files (x86)\\Java\\jre1.8.0_91\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files (x86)\\Java\\jre1.8.0_91\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "C:\\Users\\Brian\\Documents\\CSC\\CSC301\\8Puzzle\\src": {
+    "location": "C:\\Users\\Brian\\Documents\\CSC\\CSC301\\8Puzzle\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Brian\\Documents\\CSC\\CSC301\\8Puzzle\\src\u0027. Skipped."
   }
 }
