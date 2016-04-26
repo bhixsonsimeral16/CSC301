@@ -1,10 +1,12 @@
 package puzzle;
 
+import edu.princeton.cs.algs4.Queue;
+
 public class Board {
 	private final int[][] boardStart;
 	private final int SIZE;
-	private final int hamming;
-	private final int manhattan;
+	public final int hamming;
+	public final int manhattan;
 	private int row0;
 	private int col0;
 	
@@ -27,7 +29,10 @@ public class Board {
 	}
 
 	// return tile at row i, column j (or 0 if blank)
-	public int tileAt(int i, int j) {
+	public int tileAt(int i, int j) throws IndexOutOfBoundsException {
+		if(i < 0 || i >= SIZE || j < 0 || j >= SIZE){
+			throw new IndexOutOfBoundsException("That tile does not exist");
+		}
 		return boardStart[i][j];
 	}
 
@@ -79,14 +84,14 @@ public class Board {
 
 	// is this board the goal board?
 	public boolean isGoal() {
-		return hamming == 0;
+		return (hamming == 0);
 	}
 
 	// is this board solvable?
 	public boolean isSolvable() {
 		if(isGoal()) return true;
 		
-		int inversions = 0;
+		long inversions = 0;
 		int[] arr = new int[SIZE * SIZE -1];
 		
 		// create 2d array to make checks easier
@@ -100,14 +105,20 @@ public class Board {
 			}
 		}
 		
-		// check for any smaller number appearing afterwards in the array
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] > arr[j]) {
-					inversions++;
-				}
-			}
-		}
+		// Code changed to use the merge sort implementation
+		
+//		// check for any smaller number appearing afterwards in the array
+//		for (int i = 0; i < arr.length - 1; i++) {
+//			for (int j = i + 1; j < arr.length; j++) {
+//				if (arr[i] > arr[j]) {
+//					inversions++;
+//				}
+//			}
+//		}
+		
+		//count inversions using merge sort
+		inversions = count(arr);
+		
 		// if odd
 		if (SIZE % 2 == 1) {
 			return (inversions % 2 == 0);
@@ -115,9 +126,9 @@ public class Board {
 
 		// if even
 		else {
-			int sum = inversions;
+			long sum = inversions;
 			sum += row0;
-			return (sum % 2 == 0);
+			return (sum % 2 == 1);
 		}
 	}
 
@@ -135,9 +146,102 @@ public class Board {
 		}
 		else return false;
 	}
+	
+	// Following 3 methods were taken from the algs4 implementation of Inversions.java
+	// http://algs4.cs.princeton.edu/22mergesort/Inversions.java.html
+	// This implementation uses merge sort to count the number of inversions in an array
+	
+	/**
+     * Returns the number of inversions in the integer array.
+     * The argument array is not modified.
+     * @param  a the array
+     * @return the number of inversions in the array. An inversion is a pair of 
+     *         indicies <tt>i</tt> and <tt>j</tt> such that <tt>i &lt; j</tt>
+     *         and <tt>a[i]</tt> &gt; <tt>a[j]</tt>.
+     */
+	public static long count(int[] a) {
+        int[] b   = new int[a.length];
+        int[] aux = new int[a.length];
+        for (int i = 0; i < a.length; i++)
+            b[i] = a[i];
+        long inversions = count(a, b, aux, 0, a.length - 1);
+        return inversions;
+	}
+	
+	// return the number of inversions in the subarray b[lo..hi]
+    // side effect b[lo..hi] is rearranged in ascending order
+	
+	// Personal Note: Why include int[] a?  It doesn't seem that it is referenced anywhere
+	// It is in the recursive call, but it is not ever accessed or modified.
+	private static long count(int[] a, int[] b, int[] aux, int lo, int hi) {
+        long inversions = 0;
+        if (hi <= lo) return 0;
+        int mid = lo + (hi - lo) / 2;
+        inversions += count(a, b, aux, lo, mid);  
+        inversions += count(a, b, aux, mid+1, hi);
+        inversions += merge(b, aux, lo, mid, hi);
+        return inversions;
+    }
+
+    // merge and count
+	private static long merge(int[] a, int[] aux, int lo, int mid, int hi) {
+        long inversions = 0;
+
+        // copy to aux[]
+        for (int k = lo; k <= hi; k++) {
+            aux[k] = a[k]; 
+        }
+
+        // merge back to a[]
+        int i = lo, j = mid+1;
+        for (int k = lo; k <= hi; k++) {
+            if      (i > mid)           a[k] = aux[j++];
+            else if (j > hi)            a[k] = aux[i++];
+            else if (aux[j] < aux[i]) { a[k] = aux[j++]; inversions += (mid - i + 1); }
+            else                        a[k] = aux[i++];
+        }
+        return inversions;
+    }
 
 	// all neighboring boards
 	public Iterable<Board> neighbors() {
+		Queue<Board> q = new Queue<Board>();
+		int[][] neighbor = new int[SIZE][SIZE];
+		for(int i = 0; i < SIZE; i++){
+			for(int j = 0; j < SIZE; j++){
+				neighbor[i][j] = boardStart[i][j];
+			}
+		}
+		
+		if (col0 != 0){
+			neighbor = swap(row0, col0, row0, col0-1, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0, col0-1, neighbor);
+		}
+		if (col0 != SIZE-1){
+			neighbor = swap(row0, col0, row0, col0+1, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0, col0+1, neighbor);
+		}
+		if (row0 != 0){
+			neighbor = swap(row0, col0, row0-1, col0, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0-1, col0, neighbor);
+		}
+		if (row0 != SIZE-1){
+			neighbor = swap(row0, col0, row0+1, col0, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0+1, col0, neighbor);
+		}
+		return q;
+	}
+	
+	private int[][] swap(int row0, int col0, int row1, int col1, int[][] neighbor){
+		int temp = neighbor[row0][col0];
+		neighbor[row0][col0] = neighbor[row1][col1];
+		neighbor[row1][col1] = temp;
+		
+		return neighbor;
 	}
 
 	// string representation of this board (in the output format specified below)
@@ -155,20 +259,26 @@ public class Board {
 
 	// unit testing (required)
 	public static void main(String[] args) {
-		int[][] testArr = {{1,2,3},{7,8,0},{4,5,6}};
-		int[][] testArr2 = {{2,1,3},{7,8,0},{4,5,6}};
-		int[][] testArr3 = {{1,2,3},{0,7,6},{5,4,8}};
+//		int[][] testArr = {{1,2,3},{7,8,0},{4,5,6}};
+//		int[][] testArr2 = {{2,1,3},{7,8,0},{4,5,6}};
+//		int[][] testArr3 = {{1,2,3},{0,7,6},{5,4,8}};
+		int[][] testArr4 = {{1,0},{3,2}};
 		
-		Board b = new Board(testArr);
-		Board c = new Board(testArr2);
-		Board d = new Board(testArr3);
+//		Board b = new Board(testArr);
+//		Board c = new Board(testArr2);
+//		Board d = new Board(testArr3);
+		Board e = new Board(testArr4);
 		
 		
-		System.out.println(d.toString());
+		System.out.println(e.toString());
+		for(Board b : e.neighbors()){
+			System.out.println(b.toString());
+		}
 //		System.out.println(b.manhattan + "  " + b.hamming);
 //		System.out.println(c.manhattan + "  " + c.hamming);
-		System.out.println(d.manhattan + "  " + d.hamming);
-		System.out.println(d.isSolvable());
+		System.out.println(e.manhattan + "  " + e.hamming);
+		System.out.println(e.isGoal());
+		System.out.println(e.isSolvable());
 		
 	}
 }
