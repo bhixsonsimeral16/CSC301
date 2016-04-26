@@ -206,26 +206,6 @@ public class Board {
 	// all neighboring boards
 	public Iterable<Board> neighbors() {
 		Queue<Board> q = new Queue<Board>();
-		if (col0 != 0){
-			int[][] neighbor1 = swap(row0, col0, row0, col0-1, boardStart);
-			q.enqueue(new Board(neighbor1));
-		}
-		if (col0 != SIZE-1){
-			int[][] neighbor2 = swap(row0, col0, row0, col0+1, boardStart);
-			q.enqueue(new Board(neighbor2));
-		}
-		if (row0 != 0){
-			int[][] neighbor3 = swap(row0, col0, row0-1, col0, boardStart);
-			q.enqueue(new Board(neighbor3));
-		}
-		if (row0 != SIZE-1){
-			int[][] neighbor4 = swap(row0, col0, row0+1, col0, boardStart);
-			q.enqueue(new Board(neighbor4));
-		}
-		return q;
-	}
-	
-	private int[][] swap(int row0, int col0, int row1, int col1, int[][] boardStart){
 		int[][] neighbor = new int[SIZE][SIZE];
 		for(int i = 0; i < SIZE; i++){
 			for(int j = 0; j < SIZE; j++){
@@ -233,6 +213,30 @@ public class Board {
 			}
 		}
 		
+		if (col0 != 0){
+			neighbor = swap(row0, col0, row0, col0-1, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0, col0-1, neighbor);
+		}
+		if (col0 != SIZE-1){
+			neighbor = swap(row0, col0, row0, col0+1, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0, col0+1, neighbor);
+		}
+		if (row0 != 0){
+			neighbor = swap(row0, col0, row0-1, col0, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0-1, col0, neighbor);
+		}
+		if (row0 != SIZE-1){
+			neighbor = swap(row0, col0, row0+1, col0, neighbor);
+			q.enqueue(new Board(neighbor));
+			neighbor = swap(row0, col0, row0+1, col0, neighbor);
+		}
+		return q;
+	}
+	
+	private int[][] swap(int row0, int col0, int row1, int col1, int[][] neighbor){
 		int temp = neighbor[row0][col0];
 		neighbor[row0][col0] = neighbor[row1][col1];
 		neighbor[row1][col1] = temp;
@@ -257,12 +261,12 @@ public class Board {
 	public static void main(String[] args) {
 //		int[][] testArr = {{1,2,3},{7,8,0},{4,5,6}};
 //		int[][] testArr2 = {{2,1,3},{7,8,0},{4,5,6}};
-		int[][] testArr3 = {{1,2,3},{0,7,6},{5,4,8}};
+//		int[][] testArr3 = {{1,2,3},{0,7,6},{5,4,8}};
 		int[][] testArr4 = {{1,0},{3,2}};
 		
 //		Board b = new Board(testArr);
 //		Board c = new Board(testArr2);
-		Board d = new Board(testArr3);
+//		Board d = new Board(testArr3);
 		Board e = new Board(testArr4);
 		
 		

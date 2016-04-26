@@ -2,7 +2,6 @@ package puzzle;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.MinPQ;
-import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -25,9 +24,13 @@ public class Solver {
 
 		while (!currentNode.b.isGoal()) {
 			for (Board b : currentNode.b.neighbors()) {
-				if (!b.equals(currentNode.b)) {
-					minpq.insert(new SearchNode(b, currentNode.moves + 1,
-							currentNode));
+				if (currentNode.prev == null){
+					minpq.insert(new SearchNode(b, currentNode.moves + 1, currentNode));
+				}
+				else{
+					if (!b.equals(currentNode.prev.b)) {
+						minpq.insert(new SearchNode(b, currentNode.moves + 1, currentNode));
+					}
 				}
 			}
 			this.currentNode = minpq.delMin();
@@ -45,12 +48,18 @@ public class Solver {
 		}
 		
 		public int compareTo(SearchNode sn){
-			if(this.b.manhattan > sn.b.manhattan){
+			if(this.b.manhattan + this.moves > sn.b.manhattan + sn.moves){
 				return 1;
 			}
-			else if(this.b.manhattan == sn.b.manhattan){
+			else if(this.b.manhattan + this.moves == sn.b.manhattan + sn.moves){
 				return 0;
 			}
+//			if(this.b.hamming + this.moves > sn.b.hamming + sn.moves){
+//				return 1;
+//			}
+//			else if(this.b.hamming + this.moves == sn.b.hamming + sn.moves){
+//				return 0;
+//			}
 			else{
 				return -1;
 			}
