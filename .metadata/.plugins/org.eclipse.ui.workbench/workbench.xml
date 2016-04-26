@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="19" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="1026" width="1005" x="65" y="24">
+<window height="1026" width="807" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -14,8 +14,8 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="287" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="177" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -32,13 +32,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" partName="Board.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/8Puzzle/src/puzzle/Board.java" title="Board.java" tooltip="8Puzzle/src/puzzle/Board.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/8Puzzle/src/puzzle/Board.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2022" selectionTopPixel="2357"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PointST.java" partName="PointST.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/KdTrees/src/PointST.java" title="PointST.java" tooltip="KdTrees/src/PointST.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/KdTrees/src/PointST.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="38" selectionOffset="43" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="KdTreeST.java" partName="KdTreeST.java" path="/home/local/CORNELL-COLLEGE/bhixsonsimeral16/Documents/CSC301/KdTrees/src/KdTreeST.java" title="KdTreeST.java" tooltip="KdTrees/src/KdTreeST.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/KdTrees/src/KdTreeST.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1091" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -97,7 +102,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -279,136 +284,10 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/8Puzzle/src/puzzle/Board.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/KdTrees/src/PointST.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/KdTrees/src/KdTreeST.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/KdTrees/src/Hello.java"/>
 </editors>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="535" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="538" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="798" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="801" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="820" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1218" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1922" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2911" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2914" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2982" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1218" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1437" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1440" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1805" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="652" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="684" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2788" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2807" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2400" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3570" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2545" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3888" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3882" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3938" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3901" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3957" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1182" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1186" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="1185" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3856" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3809" y="2"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="3844" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="617" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2056" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2081" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2308" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2308" y="0"/>
-</item>
-<item historyLabel="Board.java" index="0">
-<position info="not_deleted" x="2472" y="0"/>
-</item>
 <item historyLabel="Board.java" index="0">
 <position info="not_deleted" x="2489" y="0"/>
 </item>
@@ -427,8 +306,137 @@
 <item historyLabel="Board.java" index="0">
 <position info="not_deleted" x="2004" y="0"/>
 </item>
-<item active="true" historyLabel="Board.java" index="0">
+<item historyLabel="Board.java" index="0">
 <position info="not_deleted" x="2022" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="157" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="248" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="197" y="11"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="224" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="197" y="11"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="218" y="1"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="461" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="739" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="945" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1511" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1396" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1171" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1117" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1184" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1143" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1082" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1084" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1086" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1046" y="5"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1170" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1046" y="5"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1163" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="1586" y="0"/>
+</item>
+<item historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="39" y="0"/>
+</item>
+<item historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="268" y="0"/>
+</item>
+<item historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="278" y="7"/>
+</item>
+<item historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="317" y="0"/>
+</item>
+<item historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="250" y="0"/>
+</item>
+<item historyLabel="PointST.java" index="1">
+<position info="not_deleted" x="43" y="38"/>
+</item>
+<item historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="250" y="0"/>
+</item>
+<item historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="Hello.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Hello.java" index="3">
+<position info="not_deleted" x="86" y="0"/>
+</item>
+<item historyLabel="Hello.java" index="3">
+<position info="not_deleted" x="87" y="0"/>
+</item>
+<item historyLabel="Hello.java" index="3">
+<position info="not_deleted" x="54" y="0"/>
+</item>
+<item historyLabel="Hello.java" index="3">
+<position info="not_deleted" x="95" y="0"/>
+</item>
+<item active="true" historyLabel="KdTreeST.java" index="2">
+<position info="not_deleted" x="1091" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -436,9 +444,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -447,11 +452,19 @@
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
 <trimItem IMemento.internal.id="bottom"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@57a143f6"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Hello.java" tooltip="KdTrees/src/Hello.java">
+<persistable path="/KdTrees/src/Hello.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="KdTreeST.java" tooltip="KdTrees/src/KdTreeST.java">
+<persistable path="/KdTrees/src/KdTreeST.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PointST.java" tooltip="KdTrees/src/PointST.java">
+<persistable path="/KdTrees/src/PointST.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Board.java" tooltip="8Puzzle/src/puzzle/Board.java">
 <persistable path="/8Puzzle/src/puzzle/Board.java"/>
 </file>
@@ -487,15 +500,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PercolationStats.java" tooltip="percolationEclipse/src/PercolationStats.java">
 <persistable path="/percolationEclipse/src/PercolationStats.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Percolation.java" tooltip="percolationEclipse/src/Percolation.java">
-<persistable path="/percolationEclipse/src/Percolation.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InteractivePercolationVisualizer.java" tooltip="percolationEclipse/src/InteractivePercolationVisualizer.java">
-<persistable path="/percolationEclipse/src/InteractivePercolationVisualizer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InteractivePercolationVisualizer.java" tooltip="percolation/src/InteractivePercolationVisualizer.java">
-<persistable path="/percolation/src/InteractivePercolationVisualizer.java"/>
 </file>
 </mruList>
 </workbench>
