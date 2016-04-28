@@ -18,13 +18,11 @@ public class KdTreeST<Value> {
 		private int level;           // is the node on an odd level of the tree
 		private Point2D p;           // Associated key
 		private Value val;           // Associate value
-		private RectHV rect;
 		
-		public KdNode(Point2D p, Value val, RectHV rect){
+		public KdNode(Point2D p, Value val){
 			this.p = p;
 			this.val = val;
 			this.level = 0;
-			this.rect = rect;
 			this.leftChild = null;
 			this.rightChild = null;
 		}
@@ -73,8 +71,7 @@ public class KdTreeST<Value> {
 //            delete(p);
 //            return;
 //        }
-		RectHV xRect = new RectHV(-Double.MAX_VALUE, -Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE);
-		KdNode node = new KdNode(p, val, xRect);
+		KdNode node = new KdNode(p, val);
         root = put(root, node);
         this.size++;
 }
@@ -91,25 +88,9 @@ public class KdTreeST<Value> {
 		
 		//move the node down the left or right subtree depending on compareTo()
 		if(cmp > 0){
-			if(x.level % 2 == 1){
-				RectHV rightRect = new RectHV(x.p.x(), x.rect.ymin(), x.rect.xmax(), x.rect.ymax());
-				node.rect = rightRect;
-			}
-			else{
-				RectHV topRect = new RectHV(x.rect.xmin(), x.p.y(), x.rect.xmax(), x.rect.ymax());
-				node.rect = topRect;
-			}
 			x.leftChild = put(x.leftChild, node);
 		}
 		else if(cmp < 0){
-			if(x.level % 2 == 1){
-				RectHV leftRect = new RectHV(x.rect.xmin(), x.rect.ymin(), x.p.x(), x.rect.ymax());
-				node.rect = leftRect;
-			}
-			else{
-				RectHV botRect = new RectHV(x.rect.xmin(), x.rect.ymin(), x.rect.xmax(), x.p.y());
-				node.rect = botRect;
-			}
 			x.rightChild = put(x.rightChild, node);
 		}
 		else{
@@ -184,21 +165,34 @@ public class KdTreeST<Value> {
 	// all points that are inside the rectangle
 	public Iterable<Point2D> range(RectHV rect) {
 		Queue<Point2D> q = new Queue<Point2D>();
-		return range(rect, root, q);
+		RectHV xRect = new RectHV(-Double.MAX_VALUE, -Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE);
+		return range(rect, xRect, root, q);
 	}
 	
-	private Iterable<Point2D> range(RectHV rect, KdNode x, Iterable<Point2D> q){
+	private Iterable<Point2D> range(RectHV rect, RectHV xRect, KdNode x, Iterable<Point2D> q){
 		if(x == null){
 			return q;
 		}
-		if(rect.intersects(x.rect)){
+		if(rect.intersects(xRect)){
 			if(rect.contains(x.p)){
 				((Queue) q).enqueue(x.p);
 			}
-			q = range(rect, x.leftChild, q);
-			q = range(rect, x.rightChild, q);
-		}
 			
+			if(x.level % 2 == 1){
+				RectHV leftRect = new RectHV(xRect.xmin(), xRect.ymin(), x.p.x(), xRect.ymax());
+				RectHV rightRect = new RectHV(x.p.x(), xRect.ymin(), xRect.xmax(), xRect.ymax());
+				q = range(rect, leftRect, x.leftChild, q);
+				q = range(rect, rightRect, x.rightChild, q);
+			}
+			
+			else{
+				RectHV topRect = new RectHV(xRect.xmin(), x.p.y(), xRect.xmax(), xRect.ymax());
+				RectHV botRect = new RectHV(xRect.xmin(), xRect.ymin(), xRect.xmax(), x.p.y());
+				q = range(rect, botRect, x.leftChild, q);
+				q = range(rect, topRect, x.rightChild, q);
+			}
+			
+		}
 		return q;
 	}
 	

@@ -184,7 +184,8 @@ public class KdTreeST<Value> {
 	// all points that are inside the rectangle
 	public Iterable<Point2D> range(RectHV rect) {
 		Queue<Point2D> q = new Queue<Point2D>();
-		return range(rect, root, q);
+		RectHV xRect = new RectHV(-Double.MAX_VALUE, -Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE);
+		return range(rect, xRect, root, q);
 	}
 	
 	private Iterable<Point2D> range(RectHV rect, KdNode x, Iterable<Point2D> q){
