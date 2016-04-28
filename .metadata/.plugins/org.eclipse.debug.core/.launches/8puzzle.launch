@@ -7,6 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="RangeSearchVisualizer"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="circle10.txt"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="input200k.txt"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="KdTrees"/>
 </launchConfiguration>

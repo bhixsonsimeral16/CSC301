@@ -1,6 +1,7 @@
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.RectHV;
+import edu.princeton.cs.algs4.Stack;
 
 public class KdTreeST<Value> {
 	private int size;
@@ -184,27 +185,88 @@ public class KdTreeST<Value> {
 	// all points that are inside the rectangle
 	public Iterable<Point2D> range(RectHV rect) {
 		Queue<Point2D> q = new Queue<Point2D>();
-		return range(rect, root, q);
-	}
-	
-	private Iterable<Point2D> range(RectHV rect, KdNode x, Iterable<Point2D> q){
-		if(x == null){
-			return q;
-		}
-		if(rect.intersects(x.rect)){
-			if(rect.contains(x.p)){
-				((Queue) q).enqueue(x.p);
+		Stack<KdNode> s = new Stack<KdNode>();
+		s.push(root);
+		
+		// If the rectangles intersect then go down the tree, starting with the left side
+		while(!s.isEmpty()){
+			KdNode node = s.pop();
+			if(node != null){
+				if(rect.intersects(node.rect)){
+					if(rect.contains(node.p)){
+						q.enqueue(node.p);
+					}
+					s.push(node.rightChild);
+					s.push(node.leftChild);
+				}
 			}
-			q = range(rect, x.leftChild, q);
-			q = range(rect, x.rightChild, q);
 		}
-			
+		
 		return q;
 	}
 	
+	
+	/**
+	 * 
+	 * This is the recursive version of range
+	 * I have decided to use the iterative version instead
+	 */
+//	public Iterable<Point2D> range(RectHV rect) {
+//		Queue<Point2D> q = new Queue<Point2D>();
+//		return range(rect, root, q);
+//	}
+//	
+//	private Iterable<Point2D> range(RectHV rect, KdNode x, Iterable<Point2D> q){
+//		if(x == null){
+//			return q;
+//		}
+//		if(rect.intersects(x.rect)){
+//			if(rect.contains(x.p)){
+//				((Queue) q).enqueue(x.p);
+//			}
+//			q = range(rect, x.leftChild, q);
+//			q = range(rect, x.rightChild, q);
+//		}
+//			
+//		return q;
+//	}
+	
 	// a nearest neighbor to point p; null if the symbol table is empty
 	public Point2D nearest(Point2D p) {
+		Point2D champ = null;
+		double champDist = Double.MAX_VALUE;
+		Stack<KdNode> s = new Stack<KdNode>();
 		
+		s.push(root);
+		while(!s.isEmpty()){
+			KdNode node = s.pop();
+			if(node != null){
+				// Is the closest point of the rectangle closer than the champ
+				// If not, then the point this subtree is not worth checking
+				if (node.rect.distanceSquaredTo(p) < champDist) {
+
+					// Is the point closer than the previous champ
+					// If so, set new champ and champDist (so that it doesn't need to be computed multiple times)
+					if (node.p.distanceSquaredTo(p) < champDist) {
+						champ = node.p;
+						champDist = champ.distanceSquaredTo(p);
+					}
+					
+					// If the right rectangle contains the point then the left does not
+					// In this case, check the right side first
+					if (node.rightChild != null && node.rightChild.rect.contains(p)) {
+						s.push(node.leftChild);
+						s.push(node.rightChild);
+					} 
+					else {
+						s.push(node.rightChild);
+						s.push(node.leftChild);
+					}
+				}
+			}
+		}
+		
+		return champ;
 	}
 	
 	// unit testing (required)
