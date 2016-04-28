@@ -1,10 +1,10 @@
 /******************************************************************************
- *  Name:
+ *  Name: Brian Hixson-Simeral
  *
- *  Operating system:
+ *  Operating system: Windows 10
  *  Compiler:
- *  Text editor / IDE:
- *  Hours to complete assignment (optional):
+ *  Text editor / IDE: Sublime 2 / Eclipse
+ *  Hours to complete assignment (optional): 7
  ******************************************************************************/
 
 
@@ -13,16 +13,22 @@
  *  Describe the Node data type you used to implement the
  *  2d-tree data structure.
  *****************************************************************************/
-
+The node that I implemented included a left and right child node, an int 
+representing the level of the tree that it is on, the Point2D associated with the
+node, the associated value, and the RectHV associated with the node.
 /******************************************************************************
  *  Describe your method for range search in a kd-tree.
  *****************************************************************************/
-
+I create a stack for nodes and a queue for the Point2Ds that are contained in the
+RectHV.  I iteratively pop the first node off the stack and if the RectHV associated
+with this node intersects the the given RectHV push the left and right children and
+check to see if the given RectHV contains the node.
 
 /******************************************************************************
  *  Describe your method for nearest neighbor search in a kd-tree.
  *****************************************************************************/
-
+Maintain a champion Point2D and champion distance as well as a stack that conatins
+nodes
 
 /******************************************************************************
  *  Using the 64-bit memory cost model from the textbook and lecture,
@@ -40,11 +46,16 @@
  *
  *****************************************************************************/
 
-bytes per Point2D:
+bytes per Point2D: 32 bytes
 
-bytes per RectHV:
+bytes per RectHV: 48 bytes (4 * 8 bytes for doubles + 16 for overhead)
 
-bytes per KdTree of N points:   ~
+bytes per KdTree of N points:   ~ 72N
+
+8 (int + padding) + 8 (KdNode) + 16 (overhead) = 32b
+16b (2 * 8 KdNode reference) + 4b (int reference) + 4b (padding) + 8b (Point2D
+reference) + 8b (value reference) + 8b (rect reference) + 24 (nested class) = 72b 
+per KdNode
 
 
 

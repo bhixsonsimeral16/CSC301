@@ -21,7 +21,7 @@ public class KdTreeST<Value> {
 		private Value val;           // Associate value
 		private RectHV rect;
 		
-		public KdNode(Point2D p, Value val, RectHV rect){
+		public KdNode(Point2D p, Value val, RectHV rect) {
 			this.p = p;
 			this.val = val;
 			this.level = 0;
@@ -32,13 +32,13 @@ public class KdTreeST<Value> {
 		// if the level is odd, compare x values
 		// if the level is even, compare y values
 		public int compareTo(KdNode node) {
-			if(node.p.x() == this.p.x() && node.p.y() == this.p.y()){
+			if(node.p.x() == this.p.x() && node.p.y() == this.p.y()) {
 				return 0;
 			}
 			
 			// if the level is odd we compare x coords
-			if(node.level % 2 == 1){
-				if(this.p.x() >= node.p.x()){
+			if(node.level % 2 == 1) {
+				if(this.p.x() >= node.p.x()) {
 					return 1;
 				}
 				else {
@@ -47,7 +47,7 @@ public class KdTreeST<Value> {
 			}
 			// if the level is even we compare y coords
 			else{
-				if(this.p.y() >= node.p.y()){
+				if(this.p.y() >= node.p.y()) {
 					return 1;
 				}
 				else {
@@ -80,19 +80,19 @@ public class KdTreeST<Value> {
         this.size++;
 }
 	
-	private KdNode put(KdNode x, KdNode node){
+	private KdNode put(KdNode x, KdNode node) {
 		node.level++;
 		
 		//if no node here, then place the node here
-		if( x == null){
+		if( x == null) {
 			return node;
 		}
 		
 		int cmp = node.compareTo(x);
 		
 		//move the node down the left or right subtree depending on compareTo()
-		if(cmp > 0){
-			if(x.level % 2 == 1){
+		if(cmp > 0) {
+			if(x.level % 2 == 1) {
 				RectHV rightRect = new RectHV(x.p.x(), x.rect.ymin(), x.rect.xmax(), x.rect.ymax());
 				node.rect = rightRect;
 			}
@@ -102,8 +102,8 @@ public class KdTreeST<Value> {
 			}
 			x.leftChild = put(x.leftChild, node);
 		}
-		else if(cmp < 0){
-			if(x.level % 2 == 1){
+		else if(cmp < 0) {
+			if(x.level % 2 == 1) {
 				RectHV leftRect = new RectHV(x.rect.xmin(), x.rect.ymin(), x.p.x(), x.rect.ymax());
 				node.rect = leftRect;
 			}
@@ -125,14 +125,14 @@ public class KdTreeST<Value> {
 		return get(root, p);
 	}
 	
-	private Value get(KdNode x, Point2D p){
-		if(x == null){
+	private Value get(KdNode x, Point2D p) {
+		if(x == null) {
 			return null;
 		}
 		double cmp;
 		
 		// if the level is odd, compare x coords
-		if(x.level % 2 == 1){
+		if(x.level % 2 == 1) {
 			cmp = p.x() - x.p.x();
 		}
 		// if the level is even, compare y coords
@@ -141,9 +141,9 @@ public class KdTreeST<Value> {
 		}
 		
 		// if p is greater than or equal to x.p then go right
-		if (cmp <= 0){
+		if (cmp <= 0) {
 			// if p is equal to x.p then return the value
-			if(p.x() - x.p.x() == 0 && p.y() - x.p.y() == 0){
+			if(p.x() - x.p.x() == 0 && p.y() - x.p.y() == 0) {
 				return x.val;
 			}
 			return get(x.leftChild, p);
@@ -166,14 +166,14 @@ public class KdTreeST<Value> {
 		Queue<KdNode> nodeQ = new Queue<KdNode>();
 		
 		nodeQ.enqueue(root);
-		while(!nodeQ.isEmpty()){
+		while(!nodeQ.isEmpty()) {
 			//dequeue the first item and enqueue its children
 			//enqueue the item's Point2D in the second queue
 			KdNode node = nodeQ.dequeue();
-			if(node.leftChild != null){
+			if(node.leftChild != null) {
 				nodeQ.enqueue(node.leftChild);
 			}
-			if(node.rightChild != null){
+			if(node.rightChild != null) {
 				nodeQ.enqueue(node.rightChild);
 			}
 			
@@ -189,11 +189,11 @@ public class KdTreeST<Value> {
 		s.push(root);
 		
 		// If the rectangles intersect then go down the tree, starting with the left side
-		while(!s.isEmpty()){
+		while(!s.isEmpty()) {
 			KdNode node = s.pop();
-			if(node != null){
-				if(rect.intersects(node.rect)){
-					if(rect.contains(node.p)){
+			if(node != null) {
+				if(rect.intersects(node.rect)) {
+					if(rect.contains(node.p)) {
 						q.enqueue(node.p);
 					}
 					s.push(node.rightChild);
@@ -216,12 +216,12 @@ public class KdTreeST<Value> {
 //		return range(rect, root, q);
 //	}
 //	
-//	private Iterable<Point2D> range(RectHV rect, KdNode x, Iterable<Point2D> q){
-//		if(x == null){
+//	private Iterable<Point2D> range(RectHV rect, KdNode x, Iterable<Point2D> q) {
+//		if(x == null) {
 //			return q;
 //		}
-//		if(rect.intersects(x.rect)){
-//			if(rect.contains(x.p)){
+//		if(rect.intersects(x.rect)) {
+//			if(rect.contains(x.p)) {
 //				((Queue) q).enqueue(x.p);
 //			}
 //			q = range(rect, x.leftChild, q);
@@ -237,10 +237,10 @@ public class KdTreeST<Value> {
 		double champDist = Double.MAX_VALUE;
 		Stack<KdNode> s = new Stack<KdNode>();
 		
-		s.push(root);
-		while(!s.isEmpty()){
+		s.push(this.root);
+		while(!s.isEmpty()) {
 			KdNode node = s.pop();
-			if(node != null){
+			if(node != null) {
 				// Is the closest point of the rectangle closer than the champ
 				// If not, then the point this subtree is not worth checking
 				if (node.rect.distanceSquaredTo(p) < champDist) {
