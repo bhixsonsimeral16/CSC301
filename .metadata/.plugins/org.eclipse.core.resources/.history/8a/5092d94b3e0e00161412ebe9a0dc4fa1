@@ -1,0 +1,140 @@
+import java.awt.Color;
+
+import edu.princeton.cs.algs4.Picture;
+
+public class SeamCarver {
+	private Picture pic;
+	private Color[][] colorArr;
+	private double[][] energyArr;
+	private int width;
+	private int height;
+	
+	// create a seam carver object based on the given picture
+	public SeamCarver(Picture picture) {
+		this.pic = new Picture(picture);
+		this.height = pic.height();
+		this.width = pic.width();
+		this.colorArr = new Color[this.height][this.width];
+		this.energyArr = new double[this.height][this.width];
+		
+		for(int i = 0; i < this.height; i++) {
+			for(int j = 0; j < this.width; j++) {
+				this.colorArr[i][j] = pic.get(i, j);
+				this.energyArr[i][j] = energy(i,j);
+			}
+		}
+		
+	}
+	
+	//current picture
+	public Picture picture() {
+		return this.pic;
+	}
+	
+	// width of the current picture
+	public int width() {
+		return this.width;
+	}
+	
+	// height of the current picture
+	public int height() {
+		return this.height;
+	}
+	
+	// energy of pixel at column x and row y
+	public double energy(int x, int y) {
+		Color xNeighbor1;
+		Color xNeighbor2;
+		Color yNeighbor1;
+		Color yNeighbor2;
+		
+		// If on the leftmost side, take the rightmost pixel
+		if(x == 0) {
+			xNeighbor1 = this.colorArr[width - 1][y];
+		}
+		else {
+			xNeighbor1 = this.colorArr[x - 1][y];
+		}
+		
+		// If on the rightmost side, take the leftmost pixel
+		if(x == this.width-1) {
+			xNeighbor2 = this.colorArr[0][y];
+		}
+		else {
+			xNeighbor2 = this.colorArr[x + 1][y];
+		}
+		
+		// If on the top, take the bottom pixel
+		if(y == 0) {
+			yNeighbor1 = this.colorArr[x][height - 1];
+		}
+		else {
+			yNeighbor1 = this.colorArr[x][y - 1];
+		}
+		
+		// If on the bottom, take the top pixel
+		if(y == this.height-1) {
+			yNeighbor2 = this.colorArr[x][0];
+		}
+		else {
+			yNeighbor2 = this.colorArr[x][y + 1];
+		}
+		
+		// Calculate the differences between colors in the x pixels
+		int xRDiff = xNeighbor1.getRed() - xNeighbor2.getRed();
+		int xBDiff = xNeighbor1.getBlue() - xNeighbor2.getBlue();
+		int xGDiff = xNeighbor1.getGreen() - xNeighbor2.getGreen();
+		
+		// Calculate the differences between colors in the y pixels
+		int yRDiff = yNeighbor1.getRed() - yNeighbor2.getRed();
+		int yBDiff = yNeighbor1.getBlue() - yNeighbor2.getBlue();
+		int yGDiff = yNeighbor1.getGreen() - yNeighbor2.getGreen();
+		
+		// Add the squares of the differences together
+		double xSquare = Math.pow(xRDiff, 2) + Math.pow(xBDiff, 2) + Math.pow(xGDiff, 2);
+		double ySquare = Math.pow(yRDiff, 2) + Math.pow(yBDiff, 2) + Math.pow(yGDiff, 2);
+		
+		// Take the sqrt of the sum of the squares
+		double sumRoot = Math.sqrt(xSquare + ySquare);
+		
+		return sumRoot;
+	}
+	
+	// sequence of indices for horizontal seam
+	public int[] findHorizontalSeam() {
+		int[] horizontalSeam = new int[this.width];
+		
+		double min = Double.MAX_VALUE;
+		double yStart = 0;
+		for(int i = 0; i < this.height; i++){
+			for(int j = 0; j < this.width; j++){
+				
+			}
+			if(energy(0, i) < min){
+				min = energy(0, i);
+				yStart = i;
+			}
+		}
+		
+	}
+	
+	// sequence of indices for vertical seam
+	public int[] findVerticalSeam() {
+		
+	}
+	
+	// remove horizontal seam from the current picture
+	public void removeHorizontalSeam(int[] seam) {
+		
+	}
+	
+	// remove vertical seam from the current picture
+	public void removeVerticalSeam(int[] seam) {
+			
+	}
+	
+	// do unit testing of this class
+	public static void main(String[] args) {
+		
+	}
+}

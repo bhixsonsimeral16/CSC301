@@ -1,3 +1,4 @@
+import edu.princeton.cs.algs4.MaxPQ;
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.Queue;
 import edu.princeton.cs.algs4.RectHV;
@@ -17,9 +18,9 @@ public class KdTreeST<Value> {
 		private KdNode leftChild;    // left subtree
 		private KdNode rightChild;   // right subtree
 		private int level;           // is the node on an odd level of the tree
-		private Point2D p;           // Associated key
-		private Value val;           // Associate value
-		private RectHV rect;
+		private Point2D p;           // Associated key, (x, y) coordinates
+		private Value val;           // Associated value
+		private RectHV rect;         // Associated rectangle
 		
 		public KdNode(Point2D p, Value val, RectHV rect) {
 			this.p = p;
@@ -70,13 +71,17 @@ public class KdTreeST<Value> {
 	// associate the value val with point p
 	public void put(Point2D p, Value val) {
 		if (p == null) throw new NullPointerException("first argument to put() is null");
-//        if (val == null) {
-//            delete(p);
-//            return;
-//        }
+
+		// The root's rectangle is always the entire area
+		// Therefore we start with the root rectangle and trim it based on values in the Kd-tree
 		RectHV xRect = new RectHV(-Double.MAX_VALUE, -Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE);
 		KdNode node = new KdNode(p, val, xRect);
+		
+		// Check this node against the root
+		// This will being the recursive calls to put()
         root = put(root, node);
+        
+        // Increment size after every put() call
         this.size++;
 }
 	
@@ -90,13 +95,19 @@ public class KdTreeST<Value> {
 		
 		int cmp = node.compareTo(x);
 		
-		//move the node down the left or right subtree depending on compareTo()
+		// move the node down the left or right subtree depending on compareTo()
+		// create a rectangle based on what level the point is on as well as which subtree
+		// the node belongs to.
 		if(cmp > 0) {
 			if(x.level % 2 == 1) {
+				// if the level is odd and cmp > 0 then the associated rectangle will be 
+				// to the right of the previous node's point
 				RectHV rightRect = new RectHV(x.p.x(), x.rect.ymin(), x.rect.xmax(), x.rect.ymax());
 				node.rect = rightRect;
 			}
 			else{
+				// if the level is even and cmp > 0 then the associated rectangle will be 
+				// on top of the previous node's point
 				RectHV topRect = new RectHV(x.rect.xmin(), x.p.y(), x.rect.xmax(), x.rect.ymax());
 				node.rect = topRect;
 			}
@@ -104,10 +115,14 @@ public class KdTreeST<Value> {
 		}
 		else if(cmp < 0) {
 			if(x.level % 2 == 1) {
+				// if the level is odd and cmp < 0 then the associated rectangle will be 
+				// to the left of the previous node's point
 				RectHV leftRect = new RectHV(x.rect.xmin(), x.rect.ymin(), x.p.x(), x.rect.ymax());
 				node.rect = leftRect;
 			}
 			else{
+				// if the level is odd and cmp < 0 then the associated rectangle will be 
+				// on the bottom of the previous node's point
 				RectHV botRect = new RectHV(x.rect.xmin(), x.rect.ymin(), x.rect.xmax(), x.p.y());
 				node.rect = botRect;
 			}
@@ -163,21 +178,25 @@ public class KdTreeST<Value> {
 	// all points in the symbol table
 	public Iterable<Point2D> points() {
 		Queue<Point2D> q = new Queue<Point2D>();
+		
+		// We use a queue because we want to visit the nodes 
+		// in the order they were added
 		Queue<KdNode> nodeQ = new Queue<KdNode>();
 		
 		nodeQ.enqueue(root);
 		while(!nodeQ.isEmpty()) {
-			//dequeue the first item and enqueue its children
-			//enqueue the item's Point2D in the second queue
-			KdNode node = nodeQ.dequeue();
-			if(node.leftChild != null) {
-				nodeQ.enqueue(node.leftChild);
-			}
-			if(node.rightChild != null) {
-				nodeQ.enqueue(node.rightChild);
-			}
 			
-			q.enqueue(node.p);
+			KdNode node = nodeQ.dequeue();
+			
+			// node == null implies that we have reached the end of the branch
+			if (node != null) {
+				// enqueue the children to get their Point2Ds
+				nodeQ.enqueue(node.leftChild);
+				nodeQ.enqueue(node.rightChild);
+				
+				// Since the node is not null, enqueue it's Point2D
+				q.enqueue(node.p);
+			}
 		}
 		return q;
 	}
@@ -185,14 +204,23 @@ public class KdTreeST<Value> {
 	// all points that are inside the rectangle
 	public Iterable<Point2D> range(RectHV rect) {
 		Queue<Point2D> q = new Queue<Point2D>();
+		
+		// This stack implements depth-first priority on the Kd-tree
 		Stack<KdNode> s = new Stack<KdNode>();
 		s.push(root);
 		
 		// If the rectangles intersect then go down the tree, starting with the left side
 		while(!s.isEmpty()) {
 			KdNode node = s.pop();
+			
+			// If the node is null, that signifies the end of a branch
 			if(node != null) {
+				
+				// If the two rectangles intersect then we push both children
+				// Left is checked first by convention
 				if(rect.intersects(node.rect)) {
+					
+					// Since the rectangles intersected, it may contain the point
 					if(rect.contains(node.p)) {
 						q.enqueue(node.p);
 					}
@@ -233,14 +261,18 @@ public class KdTreeST<Value> {
 	
 	// a nearest neighbor to point p; null if the symbol table is empty
 	public Point2D nearest(Point2D p) {
+		// Initialize champ as null and as far away as possible
 		Point2D champ = null;
 		double champDist = Double.MAX_VALUE;
+		
+		// This stack will implement depth-first priority on the Kd-tree
 		Stack<KdNode> s = new Stack<KdNode>();
 		
 		s.push(this.root);
 		while(!s.isEmpty()) {
 			KdNode node = s.pop();
 			if(node != null) {
+				
 				// Is the closest point of the rectangle closer than the champ
 				// If not, then the point this subtree is not worth checking
 				if (node.rect.distanceSquaredTo(p) < champDist) {
@@ -258,6 +290,8 @@ public class KdTreeST<Value> {
 						s.push(node.leftChild);
 						s.push(node.rightChild);
 					} 
+					
+					// Check the left side first
 					else {
 						s.push(node.rightChild);
 						s.push(node.leftChild);
@@ -267,6 +301,116 @@ public class KdTreeST<Value> {
 		}
 		
 		return champ;
+	}
+	
+	// Return an Iterable of the k nearest points
+	public Iterable<Point2D> nearest(Point2D p, int k) {
+		
+		// Sort the points by distance, delete the max distance when the PQ fills
+		MaxPQ<distNode> pq = new MaxPQ<distNode>();
+		
+		// This is the queue that we will be returned
+		// When the algorithm is complete the points from the MaxPQ will be copied over
+		Queue<Point2D> q = new Queue<Point2D>();
+		
+		// This stack will implement depth-first priority on the Kd-tree
+		Stack<KdNode> s = new Stack<KdNode>();
+		
+		// Push the root as the base-case to start the iterator
+		s.push(this.root);
+		
+		while(!s.isEmpty()) {
+			KdNode node = s.pop();
+			if(node != null) {
+				
+				// If the PQ is not yet full then we will just add the point
+				// And push the children
+				if(pq.size() < k) {
+					pq.insert(new distNode(node.p, node.p.distanceSquaredTo(p)));
+
+					// If the right rectangle contains the point then the left does not
+					// In this case, check the right side first
+					if (node.rightChild != null && node.rightChild.rect.contains(p)) {
+						s.push(node.leftChild);
+						s.push(node.rightChild);
+					} 
+					
+					// Check the left side first
+					else {
+						s.push(node.rightChild);
+						s.push(node.leftChild);
+					}
+				}
+				
+				// If the PQ is full then determine whether this point is closer
+				// than the farthest point in the PQ
+				else {
+					
+					// Make the reference simpler
+					double champDist = pq.max().dist;
+					
+					// Is the closest point of the rectangle closer than the max of the PQ
+					// If not, then this subtree is not worth checking
+					// If so, check to see if the point is closer than max and push the children
+					if (node.rect.distanceSquaredTo(p) < champDist) {
+
+						// If the point is closer than the Max of the PQ
+						// Delete the max and insert the point
+						if (node.p.distanceSquaredTo(p) < champDist) {
+							pq.insert(new distNode(node.p, node.p.distanceSquaredTo(p)));
+						}
+
+						// If the right rectangle contains the point then the left does not
+						// In this case, check the right side first
+						if (node.rightChild != null && node.rightChild.rect.contains(p)) {
+							s.push(node.leftChild);
+							s.push(node.rightChild);
+						} 
+						
+						// Check the left side first
+						else {
+							s.push(node.rightChild);
+							s.push(node.leftChild);
+						}
+					}
+				}
+				if(pq.size() > k) {
+					pq.delMax();
+				}
+			}
+		}
+		
+		// Copy the Point2D objects to the queue
+		// Distance is no longer important
+		for(distNode dn : pq) {
+			q.enqueue(dn.p);
+		}
+		
+		return q;
+	}
+	
+	// Store the point and it's distance from a given point together
+	// Do this to sort them together
+	private class distNode implements Comparable<distNode> {
+		private Point2D p;
+		private double dist;
+		
+		public distNode(Point2D p, double dist) {
+			this.p = p;
+			this.dist = dist;
+		}
+		
+		// If the dist is greater than or equal to then return 1
+		// -1 otherwise
+		// Will not return 0 because the PQ doesn't handle ties
+		public int compareTo(distNode d) {
+			if(this.dist >= d.dist) {
+				return 1;
+			}
+			else {
+				return -1;
+			}
+		}
 	}
 	
 	// unit testing (required)

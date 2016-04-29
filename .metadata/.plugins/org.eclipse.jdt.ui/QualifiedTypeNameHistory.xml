@@ -14,9 +14,12 @@
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.Stopwatch"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdIn"/>
-<fullyQualifiedTypeName name="edu.princeton.cs.algs4.MinPQ"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.In"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.StdOut"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.Queue"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.MinPQ"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.MaxPQ"/>
+<fullyQualifiedTypeName name="edu.princeton.cs.algs4.Picture"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="edu.princeton.cs.algs4.Stack"/>
 </qualifiedTypeNameHistroy>

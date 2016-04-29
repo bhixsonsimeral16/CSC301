@@ -2,13 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item value="true" key="ShowStatusLine"/>
-		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=8Puzzle/src&amp;lt;puzzle{SolverVisualizer.java[SolverVisualizer&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=8Puzzle/src&amp;lt;puzzle{Solver.java[Solver&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=8Puzzle/src&amp;lt;puzzle{PuzzleChecker.java[PuzzleChecker&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=KdTrees/src&amp;lt;{NearestNeighborVisualizer.java[NearestNeighborVisualizer&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=KdTrees/src&amp;lt;{RangeSearchVisualizer.java[RangeSearchVisualizer&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=8Puzzle/src&amp;lt;puzzle{SolverVisualizer.java[SolverVisualizer&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=8Puzzle/src&amp;lt;puzzle{Solver.java[Solver&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=8Puzzle/src&amp;lt;puzzle{PuzzleChecker.java[PuzzleChecker&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=KdTrees/src&amp;lt;{NearestNeighborVisualizer.java[NearestNeighborVisualizer&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=KdTrees/src&amp;lt;{RangeSearchVisualizer.java[RangeSearchVisualizer&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=SeamCarving/src&amp;lt;{PrintEnergy.java[PrintEnergy&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=SeamCarving/src&amp;lt;{ShowEnergy.java[ShowEnergy&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=SeamCarving/src&amp;lt;{PrintSeams.java[PrintSeams&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=SeamCarving/src&amp;lt;{ShowSeams.java[ShowSeams&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
-			<item value="600" key="DIALOG_WIDTH"/>
-			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="483" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="650" key="DIALOG_HEIGHT"/>
 			<item value="83" key="DIALOG_X_ORIGIN"/>
-			<item value="-10" key="DIALOG_Y_ORIGIN"/>
+			<item value="0" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
 </section>
