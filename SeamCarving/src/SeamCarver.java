@@ -24,16 +24,12 @@ public class SeamCarver {
 				this.colorArr[i][j] = this.pic.get(i, j);
 			}
 		}
-		System.out.println("Finished the color array");
 		
 		for(int i = 0; i < this.width; i++) {
 			for(int j = 0; j < this.height; j++) {
 				this.energyArr[i][j] = energy(i, j);
 			}
 		}
-		
-		System.out.println("Finished the energy array");
-		
 	}
 	
 	// Index class used to store x and y coords together
@@ -57,6 +53,12 @@ public class SeamCarver {
 	
 	//current picture
 	public Picture picture() {
+		this.pic = new Picture(this.width, this.height);
+		for(int i = 0; i < width; i++) {
+			for(int j = 0; j < height; j++) {
+				this.pic.set(i, j, this.colorArr[i][j]);
+			}
+		}
 		return this.pic;
 	}
 	
@@ -313,14 +315,108 @@ public class SeamCarver {
 	
 	// remove horizontal seam from the current picture
 	public void removeHorizontalSeam(int[] seam) {
+		this.height--;
 		
+		// Arrays to store new values temporarily
+		Color[][] newColorArr = new Color[this.width][this.height];
+		double[][] newEnergyArr = new double[this.width][this.height];
+		
+		// Loop through the new color array
+		for(int i = 0; i < this.width; i++) {
+			for(int j = 0; j < this.height; j++) {
+				// If the index is after the seam then move the pixel up one space
+				if(j >= seam[i]) {
+					newColorArr[i][j] = this.colorArr[i][j + 1];
+				}
+				
+				// If the index is before the seam just copy it
+				else {
+					newColorArr[i][j] = this.colorArr[i][j];
+				}
+			}
+		}
+		
+		// Set instance variable to the new data
+		this.colorArr = newColorArr;
+		
+		// Loop through the new energy array
+		// This couldn't be done in the earlier loop because the energy() 
+		// method requires a filled color array
+		for(int i = 0; i < this.width; i++) {
+			for(int j = 0; j < this.height; j++) {
+				// If the index is right above the seam or where the seam used to be, recompute the energy value
+				if(j == seam[i] - 1 || j == seam[i]) {
+					newEnergyArr[i][j] = energy(i, j);
+				}
+				// If the index is below where the seam was, copy the energy one place up the picture
+				else if(j > seam[i]) {
+					newEnergyArr[i][j] = this.energyArr[i][j + 1];
+				}
+				// If the index is before the seam copy the energy over
+				else {
+					newEnergyArr[i][j] = this.energyArr[i][j];
+				}
+			}
+		}
+		
+		// Set instance variable to the new data
+		this.energyArr = newEnergyArr;
 	}
 	
 	// remove vertical seam from the current picture
 	public void removeVerticalSeam(int[] seam) {
-			
+		this.width--;
+		
+		// Arrays to store new values temporarily
+		Color[][] newColorArr = new Color[this.width][this.height];
+		double[][] newEnergyArr = new double[this.width][this.height];
+
+		// Loop through the new color array
+		for (int i = 0; i < this.width; i++) {
+			for (int j = 0; j < this.height; j++) {
+				// If the index is after the seam then move the pixel left one
+				// space
+				if (i >= seam[j]) {
+					newColorArr[i][j] = this.colorArr[i + 1][j];
+				}
+
+				// If the index is before the seam just copy it
+				else {
+					newColorArr[i][j] = this.colorArr[i][j];
+				}
+			}
+		}
+
+		// Set instance variable to the new data
+		this.colorArr = newColorArr;
+
+		// Loop through the new energy array
+		// This couldn't be done in the earlier loop because the energy()
+		// method requires a filled color array
+		for (int i = 0; i < this.width; i++) {
+			for (int j = 0; j < this.height; j++) {
+				// If the index is directly to the left of the seam or where the
+				// seam used to be
+				// recompute the energy value
+				if (i == seam[j] - 1 || i == seam[j]) {
+					newEnergyArr[i][j] = energy(i, j);
+				}
+				// If the index is below where the seam was, copy the energy one
+				// place to the left
+				else if (i > seam[j]) {
+					newEnergyArr[i][j] = this.energyArr[i + 1][j];
+				}
+				// If the index is before the seam copy the energy over
+				else {
+					newEnergyArr[i][j] = this.energyArr[i][j];
+				}
+			}
+		}
+
+		// Set instance variable to the new data
+		this.energyArr = newEnergyArr;
 	}
-	
+
 	// do unit testing of this class
 	public static void main(String[] args) {
 		
