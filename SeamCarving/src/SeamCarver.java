@@ -7,10 +7,6 @@ public class SeamCarver {
 	private Picture pic;
 	private Color[][] colorArr;
 	private double[][] energyArr;
-	private double[][] hDistTo;
-	private Index[][] hEdgeTo;
-	private double[][] vDistTo;
-	private Index[][] vEdgeTo;
 	private int width;
 	private int height;
 	
@@ -22,16 +18,10 @@ public class SeamCarver {
 		this.width = this.pic.width();
 		this.colorArr = new Color[this.width][this.height];
 		this.energyArr = new double[this.width][this.height];
-		this.hDistTo = new double[this.width][this.height];
-		this.hEdgeTo = new Index[this.width][this.height];
-		this.vDistTo = new double[this.width][this.height];
-		this.vEdgeTo = new Index[this.width][this.height];
 		
 		for(int i = 0; i < this.width; i++) {
 			for(int j = 0; j < this.height; j++) {
 				this.colorArr[i][j] = this.pic.get(i, j);
-				this.hDistTo[i][j] = Double.MAX_VALUE;
-				this.vDistTo[i][j] = Double.MAX_VALUE;
 			}
 		}
 		System.out.println("Finished the color array");
@@ -141,6 +131,9 @@ public class SeamCarver {
 	
 	// sequence of indices for horizontal seam
 	public int[] findHorizontalSeam() {
+		double[][] hDistTo = new double[this.width][this.height];
+		Index[][] hEdgeTo = new Index[this.width][this.height];
+		
 		int[] horizontalSeam = new int[this.width];
 		double minimumEnergy = Double.MAX_VALUE;
 		Index minIndex = null;
@@ -148,13 +141,19 @@ public class SeamCarver {
 		Stack<Index> s = new Stack<Index>();
 		Index nextIndex;
 		
+		for(int i = 1; i < this.width; i++) {
+			for(int j = 0; j < this.height; j++) {
+				hDistTo[i][j] = Double.MAX_VALUE;
+			}
+		}
+		
 		for(int i = 0; i < this.width; i++) {
 			for(int j = 0; j < this.height; j++) {
 				
 				// If this is the leftmost column then initialize the edge to null and the dist to their energy value
 				if(i == 0) {
-					this.hEdgeTo[i][j] = null;
-					this.hDistTo[i][j] = this.energyArr[i][j];
+					hEdgeTo[i][j] = null;
+					hDistTo[i][j] = this.energyArr[i][j];
 				}
 				
 				// If the pixel is not in the rightmost column check the distance to the pixels in the next column
@@ -166,9 +165,9 @@ public class SeamCarver {
 						// If the distance from the current point to the next
 						// point is less than the minimum distance
 						// Save the distance and index
-						if (this.hDistTo[i][j] + this.energyArr[i + 1][j - 1] < this.hDistTo[i + 1][j - 1]) {
-							this.hDistTo[i + 1][j - 1] = this.hDistTo[i][j] + this.energyArr[i + 1][j - 1];
-							this.hEdgeTo[i + 1][j - 1] = new Index(i, j);
+						if (hDistTo[i][j] + this.energyArr[i + 1][j - 1] < hDistTo[i + 1][j - 1]) {
+							hDistTo[i + 1][j - 1] = hDistTo[i][j] + this.energyArr[i + 1][j - 1];
+							hEdgeTo[i + 1][j - 1] = new Index(i, j);
 						}
 					}
 
@@ -178,25 +177,25 @@ public class SeamCarver {
 						// If the distance from the current point to the next
 						// point is less than the minimum distance
 						// Save the distance and index
-						if (this.hDistTo[i][j] + this.energyArr[i + 1][j + 1] < this.hDistTo[i + 1][j + 1]) {
-							this.hDistTo[i + 1][j + 1] = this.hDistTo[i][j] + this.energyArr[i + 1][j + 1];
-							this.hEdgeTo[i + 1][j + 1] = new Index(i, j);
+						if (hDistTo[i][j] + this.energyArr[i + 1][j + 1] < hDistTo[i + 1][j + 1]) {
+							hDistTo[i + 1][j + 1] = hDistTo[i][j] + this.energyArr[i + 1][j + 1];
+							hEdgeTo[i + 1][j + 1] = new Index(i, j);
 						}
 					}
 
 					// If the distance from the current point to the next point
 					// is less than the minimum distance
 					// Save the distance and index
-					if (this.hDistTo[i][j] + this.energyArr[i + 1][j] < this.hDistTo[i + 1][j]) {
-						this.hDistTo[i + 1][j] = this.hDistTo[i][j] + this.energyArr[i + 1][j];
-						this.hEdgeTo[i + 1][j] = new Index(i, j);
+					if (hDistTo[i][j] + this.energyArr[i + 1][j] < hDistTo[i + 1][j]) {
+						hDistTo[i + 1][j] = hDistTo[i][j] + this.energyArr[i + 1][j];
+						hEdgeTo[i + 1][j] = new Index(i, j);
 					}
 				}
 
 				// If the pixel is in the rightmost column, check for the minimum distance
 				else{
-					if(this.hDistTo[i][j] < minimumEnergy){
-						minimumEnergy = this.hDistTo[i][j];
+					if(hDistTo[i][j] < minimumEnergy){
+						minimumEnergy = hDistTo[i][j];
 						minIndex = new Index(i, j);
 					}
 				}
@@ -205,10 +204,10 @@ public class SeamCarver {
 		
 		// Add each index in the shortest path to a Stack
 		s.push(minIndex);
-		nextIndex = this.hEdgeTo[minIndex.getCol()][minIndex.getRow()];
+		nextIndex = hEdgeTo[minIndex.getCol()][minIndex.getRow()];
 		while(nextIndex != null) {
 			s.push(nextIndex);
-			nextIndex = this.hEdgeTo[nextIndex.getCol()][nextIndex.getRow()];
+			nextIndex = hEdgeTo[nextIndex.getCol()][nextIndex.getRow()];
 		}
 		
 		// Pop the index from the stack and add its row to the int[]
@@ -223,6 +222,9 @@ public class SeamCarver {
 	
 	// sequence of indices for vertical seam
 	public int[] findVerticalSeam() {
+		double[][] vDistTo = new double[this.width][this.height];
+		Index[][] vEdgeTo = new Index[this.width][this.height];
+		
 		int[] verticalSeam = new int[this.height];
 		double minimumEnergy = Double.MAX_VALUE;
 		Index minIndex = null;
@@ -230,13 +232,19 @@ public class SeamCarver {
 		Stack<Index> s = new Stack<Index>();
 		Index nextIndex;
 		
+		for(int i = 1; i < this.width; i++) {
+			for(int j = 0; j < this.height; j++) {
+				vDistTo[i][j] = Double.MAX_VALUE;
+			}
+		}
+		
 		for(int j = 0; j < this.height; j++) {
 			for(int i = 0; i < this.width; i++) {
 				
 				// If this is the top row then initialize the edge to null and the dist to their energy value
 				if(j == 0) {
-					this.vEdgeTo[i][j] = null;
-					this.vDistTo[i][j] = this.energyArr[i][j];
+					vEdgeTo[i][j] = null;
+					vDistTo[i][j] = this.energyArr[i][j];
 				}
 				
 				// If the pixel is not in the bottom row check the distance to the pixels in the next column
@@ -248,9 +256,9 @@ public class SeamCarver {
 						// If the distance from the current point to the next
 						// point is less than the minimum distance
 						// Save the distance and index
-						if (this.vDistTo[i][j] + this.energyArr[i - 1][j + 1] < this.vDistTo[i - 1][j + 1]) {
-							this.vDistTo[i - 1][j + 1] = this.vDistTo[i][j] + this.energyArr[i - 1][j + 1];
-							this.vEdgeTo[i - 1][j + 1] = new Index(i, j);
+						if (vDistTo[i][j] + this.energyArr[i - 1][j + 1] < vDistTo[i - 1][j + 1]) {
+							vDistTo[i - 1][j + 1] = vDistTo[i][j] + this.energyArr[i - 1][j + 1];
+							vEdgeTo[i - 1][j + 1] = new Index(i, j);
 						}
 					}
 
@@ -260,25 +268,25 @@ public class SeamCarver {
 						// If the distance from the current point to the next
 						// point is less than the minimum distance
 						// Save the distance and index
-						if (this.vDistTo[i][j] + this.energyArr[i + 1][j + 1] < this.vDistTo[i + 1][j + 1]) {
-							this.vDistTo[i + 1][j + 1] = this.vDistTo[i][j] + this.energyArr[i + 1][j + 1];
-							this.vEdgeTo[i + 1][j + 1] = new Index(i, j);
+						if (vDistTo[i][j] + this.energyArr[i + 1][j + 1] < vDistTo[i + 1][j + 1]) {
+							vDistTo[i + 1][j + 1] = vDistTo[i][j] + this.energyArr[i + 1][j + 1];
+							vEdgeTo[i + 1][j + 1] = new Index(i, j);
 						}
 					}
 
 					// If the distance from the current point to the next point
 					// is less than the minimum distance
 					// Save the distance and index
-					if (this.vDistTo[i][j] + this.energyArr[i][j + 1] < this.vDistTo[i][j + 1]) {
-						this.vDistTo[i][j + 1] = this.vDistTo[i][j] + this.energyArr[i][j + 1];
-						this.vEdgeTo[i][j + 1] = new Index(i, j);
+					if (vDistTo[i][j] + this.energyArr[i][j + 1] < vDistTo[i][j + 1]) {
+						vDistTo[i][j + 1] = vDistTo[i][j] + this.energyArr[i][j + 1];
+						vEdgeTo[i][j + 1] = new Index(i, j);
 					}
 				}
 
 				// If the pixel is on the bottom, check for the minimum distance
 				else{
-					if(this.vDistTo[i][j] < minimumEnergy){
-						minimumEnergy = this.vDistTo[i][j];
+					if(vDistTo[i][j] < minimumEnergy){
+						minimumEnergy = vDistTo[i][j];
 						minIndex = new Index(i, j);
 					}
 				}
@@ -287,10 +295,10 @@ public class SeamCarver {
 		
 		// Add each index in the shortest path to a Stack
 		s.push(minIndex);
-		nextIndex = this.vEdgeTo[minIndex.getCol()][minIndex.getRow()];
+		nextIndex = vEdgeTo[minIndex.getCol()][minIndex.getRow()];
 		while(nextIndex != null) {
 			s.push(nextIndex);
-			nextIndex = this.vEdgeTo[nextIndex.getCol()][nextIndex.getRow()];
+			nextIndex = vEdgeTo[nextIndex.getCol()][nextIndex.getRow()];
 		}
 		
 		// Pop the index from the stack and add its column to the int[]
