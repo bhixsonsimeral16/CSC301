@@ -4,7 +4,7 @@
  *  Operating system: Windows 10
  *  Compiler:
  *  Text editor / IDE: Sublime 2 / Eclipse
- *  Hours to complete assignment (optional): 6
+ *  Hours to complete assignment (optional): 7
  ******************************************************************************/
 
 
@@ -43,30 +43,34 @@ oddly remove parts of people that didn't change much.
  *****************************************************************************/
 
 (keep W constant)
- W = 800
+ W = 1200
  H           Row removal time (seconds)     Column removal time (seconds)
 --------------------------------------------------------------------------
-300              0.026                             0.037
-600              0.037                             0.047
-1200             0.08                              0.096
-2400             0.31                              0.227
-
+1200              0.06256                           0.11852 Row Ratio  Col Ratio
+2400              0.15434                           0.26402   2.46       2.228
+4800              0.42178                           0.86592   2.73       3.28
+9600              1.19008                           2.16416   2.82       2.49
+                                                        avg:  2.67       1.666
+                                                        log:  1.42       1.415
 
 (keep H constant)
- H = 600
+ H = 1200
  W           Row removal time (seconds)     Column removal time (seconds)
 --------------------------------------------------------------------------
-400              0.023                             0.034
-800              0.037                             0.047
-1600             0.081                             0.096
-3200             0.311                             0.2
+1200              0.06256                           0.11852 Row Ratio  Col Ratio
+2400              0.16562                           0.2804    2.647      2.366
+4800              0.50348                           0.87834   3.04       3.132
+9600              1.31708                           2.86822   2.62       3.266
+                                                        avg:  2.769      2.921
+                                                        log:  1.469      1.546
+
+Running time to remove one row as a function of both W and H:  
+~ 4.74E-6 * (H^1.42 + W^1.469)
 
 
-Running time to remove one row as a function of both W and H:  ~ H + W
 
-
-
-Running time to remove one column as a function of both W and H:  ~ H + W
+Running time to remove one column as a function of both W and H:  
+~ 3.36E-6 * (H^1.415 + W^1.546)
 
 
 
@@ -91,7 +95,8 @@ Running time to remove one column as a function of both W and H:  ~ H + W
 /******************************************************************************
  *  Describe any serious problems you encountered.
  *****************************************************************************/
-
+Trying to figure out the runtime function was kind of difficult as the numbers
+varied by so much in each run.  Even the average had quite a large varience.
 
 
 

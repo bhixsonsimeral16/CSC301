@@ -75,9 +75,9 @@ per KdNode
                        calls to nearest() per second
                      brute force               2d-tree
                      ---------------------------------
-input100K.txt
+input100K.txt        27.2                      95581.4
 
-input1M.txt
+input1M.txt          2.2                       57082.6
 
 
 
@@ -94,7 +94,7 @@ input1M.txt
  *  include any help from people (including classmates and friends) and
  *  attribute them by name.
  *****************************************************************************/
-
+Nigel helped me write the testing script for the nearest neighbor calculations
 
 /******************************************************************************
  *  Describe any serious problems you encountered.

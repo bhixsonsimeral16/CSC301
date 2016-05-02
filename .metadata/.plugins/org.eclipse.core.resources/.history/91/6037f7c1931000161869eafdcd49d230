@@ -1,0 +1,58 @@
+/******************************************************************************
+ *  Compilation:  javac ResizeDemo.java
+ *  Execution:    java ResizeDemo input.png columnsToRemove rowsToRemove
+ *  Dependencies: SeamCarver.java
+ *                
+ *
+ *  Read image from file specified as command line argument. Use SeamCarver
+ *  to remove number of rows and columns specified as command line arguments.
+ *  Display the image and print time elapsed.
+ *
+ *  % java ResizeDemo HJoceanSmall.png 150 0
+ *
+ ******************************************************************************/
+
+import edu.princeton.cs.algs4.Picture;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.Stopwatch;
+
+public class ResizeDemo {
+    public static void main(String[] args) {
+//        if (args.length != 3) {
+//            StdOut.println("Usage:\njava ResizeDemo [image filename] [num columns to remove] [num rows to remove]");
+//            return;
+//        }
+    	double rowTime = 0;
+    	double colTime = 0;
+		for (int j = 0; j < 1; j++) {
+			Stopwatch stop = new Stopwatch();
+			Picture picture = SCUtility.randomPicture(6400, 1200);
+
+//			StdOut.printf("%d-by-%d image\n", picture.width(), picture.height());
+			SeamCarver sc = new SeamCarver(picture);
+
+			Stopwatch sw = new Stopwatch();
+
+			int[] horizontalSeam = sc.findHorizontalSeam();
+			sc.removeHorizontalSeam(horizontalSeam);
+
+			rowTime += sw.elapsedTime();
+			
+			Stopwatch sw2 = new Stopwatch();
+
+			int[] verticalSeam = sc.findVerticalSeam();
+			sc.removeVerticalSeam(verticalSeam);
+
+			colTime += sw2.elapsedTime();
+//			System.out.println("Cycle time: " + stop.elapsedTime() + "\n");
+		}
+
+//        StdOut.printf("new image size is %d columns by %d rows\n", sc.width(), sc.height());
+
+        StdOut.println("Row time: " + rowTime + " seconds.");
+        StdOut.println("Col time: " + colTime + " seconds.");
+//        picture.show();
+//        sc.picture().show();    
+    }
+    
+}

@@ -24,14 +24,16 @@ public class ResizeDemo {
 //        }
     	double rowTime = 0;
     	double colTime = 0;
-		for (int j = 0; j < 1; j++) {
-			Picture picture = SCUtility.randomPicture(3200, 600);
+    	double totalTime = 0;
+		for (int j = 0; j < 50; j++) {
+//			Stopwatch stop = new Stopwatch();
+			Picture picture = SCUtility.randomPicture(1200, 1200);
 
 //			StdOut.printf("%d-by-%d image\n", picture.width(), picture.height());
+			Stopwatch stop = new Stopwatch();
 			SeamCarver sc = new SeamCarver(picture);
 
 			Stopwatch sw = new Stopwatch();
-
 			int[] horizontalSeam = sc.findHorizontalSeam();
 			sc.removeHorizontalSeam(horizontalSeam);
 
@@ -41,14 +43,17 @@ public class ResizeDemo {
 
 			int[] verticalSeam = sc.findVerticalSeam();
 			sc.removeVerticalSeam(verticalSeam);
-
+			
+			totalTime += stop.elapsedTime();
 			colTime += sw2.elapsedTime();
+//			System.out.println("Cycle time: " + stop.elapsedTime() + "\n");
 		}
 
 //        StdOut.printf("new image size is %d columns by %d rows\n", sc.width(), sc.height());
 
-        StdOut.println("Row time: " + rowTime + " seconds.");
-        StdOut.println("Col time: " + colTime + " seconds.");
+        StdOut.println("Row time: " + rowTime/50 + " seconds.");
+        StdOut.println("Col time: " + colTime/50 + " seconds.");
+        StdOut.println("Total time: " + totalTime/50 + " seconds.");
 //        picture.show();
 //        sc.picture().show();    
     }
